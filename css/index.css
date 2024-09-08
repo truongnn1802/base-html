@@ -11,9 +11,10 @@
     margin: 0;
     height: 100%;
     align-items: center;
+    justify-content: space-between;
 }
 .header .list-menu .list-menu__item{
-    padding: 10px 15px;
+    padding: 10px 0px;
 }
 .header .list-menu .list-menu__item a{
     display: inline-block;
