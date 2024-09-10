@@ -10,7 +10,7 @@
     padding: 0;
     display: block;
   }
-  .grid.wide {
+ .wide {
     max-width: 1400px;
     margin: 0 auto;
     width: 1320px;
@@ -18,6 +18,10 @@
   .row {
     display: flex;
     flex-wrap: wrap;
+  }
+  .row.no-wrap{
+    flex-wrap: nowrap;
+
   }
   .row.flex-column{
     flex-direction: column;
@@ -36,6 +40,9 @@
   
   .align-center {
     align-items: center;
+  }
+  .align-end {
+    align-items: end;
   }
   .justify-center {
     justify-content: center;

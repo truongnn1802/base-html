@@ -3,6 +3,17 @@
   --text-color:#1C1A7B
 }
 
+@font-face {
+  font-family: 'SVN-Gilroy'; 
+  src: url('../fonts/SVNGilroy\ Bold.otf') format('truetype'); 
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'SVN-Gilroy'; 
+  src: url('../fonts/SVNGilroy\ Light.otf') format('truetype'); 
+  font-weight: normal;
+}
+
 .mr-1{
   margin-right: 8px;
 }
