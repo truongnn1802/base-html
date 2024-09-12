@@ -1,6 +1,7 @@
 :root {
   --primary-color: #3068f7;
-  --text-color:#1C1A7B
+  --text-color:#1C1A7B;
+  --second-color-text:#0E3441
 }
 
 @font-face {
@@ -64,4 +65,21 @@
   left: -18px;
   bottom: -18px;
   z-index: -1;
+}
+
+input,textarea{
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  padding: 11px 12px 12px;
+  outline: none;
+  background-color: #F1F1F1;
+}
+
+input:focus,textarea:focus{
+  outline: 1px solid var(--primary-color);
+}
+
+textarea{
+  resize: none;
 }
