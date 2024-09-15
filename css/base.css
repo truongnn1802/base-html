@@ -83,3 +83,54 @@ input:focus,textarea:focus{
 textarea{
   resize: none;
 }
+
+/* header */
+.header {
+  padding: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.header .logo > img {
+  height: 55px;
+}
+
+.header .list-menu {
+  display: flex;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .list-menu .list-menu__item {
+  padding: 10px 0px;
+}
+.header .list-menu .list-menu__item a {
+  display: inline-block;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.header .list-menu .list-menu__item:hover a {
+  color: #1c1a7b;
+}
+.header .list-menu .list-menu__item:hover .dropdown-icon path {
+  fill: #1c1a7b;
+}
+
+.header .search {
+  padding-right: 0;
+  justify-content: end;
+  align-items: center;
+}
+
+.social-network{
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(calc(100% + 50px),-40px);
+}
+
+.social-network img{
+  width: 40px;
+  height: 40px;
+}

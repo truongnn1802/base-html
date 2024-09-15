@@ -159,9 +159,19 @@
   .xl-o-11 {
     margin-left: 91.66667%;
   }
+
+  @media screen and (max-width: 1599px) {
+    .grid.wide {
+      width: 1120px;
+    }
+  }
+
+  @media screen and (max-width: 1399px) {
+   
+  }
   
   @media screen and (max-width: 1199px) {
-    .wide {
+    .grid.wide {
       width: 960px;
     }
     .col {
