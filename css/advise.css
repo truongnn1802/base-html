@@ -1,0 +1,194 @@
+.header {
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo>img {
+    height: 55px;
+}
+
+.header .list-menu {
+    display: flex;
+    margin: 0;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .list-menu .list-menu__item {
+    padding: 10px 0px;
+}
+
+.header .list-menu .list-menu__item a {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header .list-menu .list-menu__item:hover a {
+    color: #1c1a7b;
+}
+
+.header .list-menu .list-menu__item:hover .dropdown-icon path {
+    fill: #1c1a7b;
+}
+
+.header .search {
+    padding-right: 0;
+    justify-content: end;
+    align-items: center;
+}
+
+/*-------------------------------------------------- body---------------------------------------------- */
+.grid.advise {
+    margin-top: 60px;
+}
+
+.advise .left {
+    padding-right: 1.6rem;
+    padding-left: 0;
+}
+
+.advise .left .check-list ul {
+    padding: 0;
+    margin: 30px 0;
+}
+
+.advise .left .check-list ul li.wrap__check__list {
+    display: flex;
+}
+
+.advise .left .check-list ul li .checked-title {
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    padding: 5px 20px 0;
+    margin: 0;
+
+}
+
+.introduce .left h2,
+.title h3 {
+    color: var(--primary-color);
+    font-size: 4rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.title p {
+    margin: 0;
+}
+
+
+
+.advise .right img {
+    width: 100%;
+}
+
+/*-------------------------------------------------------- benefit------------------------------------------- */
+.benefit .left {}
+
+.benefit .right {}
+
+.benefit .right .wrap-content {
+    width: 345px;
+}
+
+.benefit .right .wrap-content .list-benefit ul {
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.benefit .right .wrap-content .list-benefit ul li p {
+    color: var(--text-color);
+    font-size: 20px;
+    padding: 5px 0;
+    margin: 0;
+}
+
+/* --------------problem------------------- */
+.grid.problem {
+    margin-top: 250px;
+}
+
+.problem .title {
+    text-align: center;
+}
+
+.problem .title h3 {
+    text-align: center;
+}
+
+.problem .list-problem .item-content {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.problem .list-problem {
+    margin-top: 60px;
+}
+
+.problem .list-problem .item-content .img-content {
+    padding-right: 37px;
+}
+
+.problem .list-problem .item-content .content-detail .content__detail__title {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    color: #000000;
+    padding-bottom: 25px;
+    width: 325px;
+}
+
+.problem .list-problem .item-content .content-detail .content__detail__desc {
+    font-size: 16px;
+    margin: 0;
+    color: #000000;
+    width: 451px;
+}
+
+/* ---------------------------------------------footer--------------------------------------------- */
+footer {
+    margin-top: 15rem;
+    background-color: #F6F6F6;
+    padding: 10rem 0 3.2rem;
+}
+
+footer .col {
+    color: var(--second-color-text);
+}
+
+footer .col h6,
+footer .col p {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 3rem;
+}
+
+footer .col h6 {
+    font-weight: 900;
+}
+
+footer .col p {
+    margin: 0;
+}
+
+footer .col:first-child p {
+    display: flex;
+    align-items: center;
+}
+
+footer .col p svg {
+    margin-right: 1rem;
+}
+
+.copyright {
+    color: var(--second-color-text);
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top: 6.9rem;
+}
