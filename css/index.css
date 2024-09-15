@@ -3,9 +3,11 @@
   margin-top: 90px;
   position: relative;
 }
+
 .introduce .left {
   padding-right: 1.6rem;
-  padding-left: 0;
+  flex: 0 0 45.15151515%;
+  max-width: 45.15151515%;
 }
 .introduce .left h2,
 .title h3 {
@@ -23,7 +25,7 @@
   color: var(--text-color);
   font-size: 2rem;
   font-weight: 400;
-  margin: 3rem 0;
+  margin: 2rem 0;
   line-height: 1.2;
 }
 
@@ -38,6 +40,7 @@
 .introduce .right {
   padding-left: 1.6rem;
   padding-right: 0;
+  flex: 1;
 }
 .introduce .right img {
   width: 100%;
@@ -67,16 +70,37 @@
   position: relative;
   margin: 35px 0;
 }
+
+.indicators .number {
+  /* Có thể thêm width cố định hoặc không cần */
+  flex-grow: 1; /* Mặc định cho tất cả phần tử con */
+}
+
+/* Chỉnh tỷ lệ theo yêu cầu */
+.indicators .number:nth-child(1) {
+  flex-grow: 1;
+  text-align: left;
+}
+.indicators .number:nth-child(2),
+.indicators .number:nth-child(3) {
+  flex-grow: 2;
+}
+.indicators .number:nth-child(4) {
+  flex-grow: 1;
+  text-align: right;
+}
+
 .indicators .number h3 {
   font-size: 80px;
   margin: 0;
   color: var(--primary-color);
   line-height: 1.5;
+  font-weight: bold;
 }
 
 .indicators .number span {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.2;
   margin: 0;
 }
@@ -572,7 +596,7 @@ footer .col p svg {
   .testimonial .wide {
     width: 960px;
   }
-  .testimonial{
+  .testimonial {
     padding: 10rem 0;
     height: auto;
   }
@@ -589,29 +613,29 @@ footer .col p svg {
     transform: translate(18%, 75%);
   }
 
-  .testimonial .pagi span{
+  .testimonial .pagi span {
     font-size: 4rem;
   }
 
-  .testimonial .comment{
+  .testimonial .comment {
     padding: 2rem;
   }
 
-  .testimonial .identity .avatar{
+  .testimonial .identity .avatar {
     margin-right: 15px;
   }
-  .testimonial .identity .avatar > div{
-    width: 48px!important;
-    height: 48px!important;
+  .testimonial .identity .avatar > div {
+    width: 48px !important;
+    height: 48px !important;
   }
 
-  .identity .avatar + div > h4{
+  .identity .avatar + div > h4 {
     font-size: 1.6rem;
   }
-  .identity .avatar + div > p{
+  .identity .avatar + div > p {
     font-size: 1.3rem;
   }
-  .comment p{
+  .comment p {
     font-size: 1.4rem;
     margin-top: 2rem;
   }

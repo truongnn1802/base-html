@@ -28,14 +28,18 @@
   }
   .row {
     margin: 0 -12px;
+    width: 100%;
   }
   .row.no-gutter {
-    margin: 0 -12px;
+    margin: 0;
   }
   
   .col {
     padding: 0 12px;
     box-sizing: border-box;
+  }
+  .col.no-gutter {
+    padding: 0;
   }
   
   .align-center {
