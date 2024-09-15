@@ -115,6 +115,11 @@
   top: 0;
   right: 0;
 }
+
+.service .right {
+  text-align: end;
+  margin-right: 105px;
+}
 /* --------------product------------------- */
 .grid.products,
 .grid.business,
@@ -359,7 +364,7 @@
   width: 180px;
   height: 84px;
   margin-bottom: 3rem;
-  /* margin-right: 3rem; */
+  overflow: hidden;
 }
 .partner .col:not(:nth-child(5n)) {
   margin-right: 3rem;
@@ -398,7 +403,7 @@
 }
 
 .register .field input {
-  width: 315px;
+  width: calc(50% - 10px);
   box-sizing: border-box;
 }
 
@@ -479,7 +484,9 @@ footer .col p svg {
   .indicators .number h3 {
     font-size: 7.2rem;
   }
-
+  .service .right {
+    margin-right: 60px;
+  }
   .products .prd {
     padding: 60px 30px 10px 30px;
   }
@@ -574,6 +581,15 @@ footer .col p svg {
     width: auto;
   }
 
+  .service img {
+    width: 80% !important;
+  }
+
+  .service .right {
+    margin-right: 0;
+    text-align: center;
+  }
+
   .products .prd {
     padding: 60px 30px 10px 30px;
   }
@@ -643,8 +659,17 @@ footer .col p svg {
     font-size: 2.8rem;
   }
 
+  .partner .col:not(:nth-child(5n)) {
+    margin-right: 2rem;
+}
+
   .blog .row {
     margin-top: 0;
+  }
+
+  .grid.register {
+    width: 920px;
+    margin-top: 10rem;
   }
 
   .register .info h6 {
@@ -653,6 +678,15 @@ footer .col p svg {
 
   .register .info p {
     font-size: 1.6rem;
+  }
+
+  .register .field input:first-child {
+    margin-right: 18px;
+  }
+ 
+  footer .col h6,
+  footer .col p {
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 991px) {
