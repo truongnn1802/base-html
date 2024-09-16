@@ -151,6 +151,76 @@
     width: 451px;
 }
 
+/* ---------------------------------------------reason----------------------------------- */
+.reason.grid {
+    margin-top: 150px;
+}
+
+.reason .title {
+    text-align: center;
+
+}
+
+.reason .list-reason .item-reason {
+    margin-top: 0;
+    padding: 62px 32px 10px 30px;
+    width: calc((100% - 64px) / 3);
+}
+
+.reason .list-reason .item-reason h5 {
+    font-size: 24px;
+    color: var(--text-color);
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.reason .list-reason .item-reason p {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 300;
+
+}
+
+/* ---------------------------------------------project------------------------------------------------- */
+.project.grid {
+    margin-top: 150px;
+}
+
+.project .title {
+    text-align: center;
+}
+
+.project .title p {
+
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.project .list-project {
+    margin-top: 30px;
+}
+
+.project .list-project .item-project {
+    margin: 30px 0;
+}
+
+.project .list-project .item-project img {
+    border-radius: 8px;
+}
+
+.project .list-project .item-project h6 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 20px 0 10px 0;
+}
+
+.project .list-project .item-project p {
+    font-size: 16px;
+    margin: 0;
+    color: #1F1F1F;
+}
+
 /* ---------------------------------------------footer--------------------------------------------- */
 footer {
     margin-top: 15rem;
