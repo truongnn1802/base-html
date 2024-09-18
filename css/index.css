@@ -250,6 +250,7 @@
 .deltal .right .block {
   position: relative;
   width: fit-content;
+  overflow: hidden;
 }
 .deltal .right {
   position: relative;
@@ -257,7 +258,7 @@
 .deltal .right .block p {
   position: absolute;
   bottom: 8px;
-  left: 4px;
+  left: 0px;
   width: 100%;
   margin: 0;
   background: linear-gradient(90deg, #3068f7 0%, rgba(255, 255, 255, 0) 100%);
@@ -322,6 +323,10 @@
 .blog > .row > .col img {
   width: 100%;
 }
+.blog .col{
+  cursor: pointer;
+  margin-top: 15px;
+}
 .blog .row .col div {
   margin: 20px 0;
   display: flex;
@@ -364,6 +369,7 @@
   height: 84px;
   margin-bottom: 3rem;
   overflow: hidden;
+  cursor: pointer;
 }
 .partner .col:not(:nth-child(5n)) {
   margin-right: 3rem;
@@ -738,9 +744,6 @@
   .testimonial .background span {
     font-size: 16px;
   }
-  .testimonial .background img {
-    height: 160px;
-  }
 
   .testimonial .pagi span {
     font-size: 4rem;
@@ -773,15 +776,11 @@
     margin-top: 2rem;
   }
   .business .col h6 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 
   .partner .col:not(:nth-child(5n)) {
     margin-right: 2rem;
-  }
-
-  .blog .row {
-    margin-top: 0;
   }
 
   .grid.register {
@@ -789,7 +788,7 @@
   }
 
   .register .info h6 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .register .info p {
@@ -815,8 +814,31 @@
   .grid.business {
     padding: 0;
   }
+  .blog .row .col div > span{
+    margin-right: 8px;
+    font-size: 12px;
+  }
+  .blog .row .col div > span svg{
+    width: 14px;
+    height: 14px;
+  }
+  .blog .row .col div > span:nth-child(2){
+    margin-left: 8px;
+  }
+  .blog span.row span{
+    width: 4px!important;
+  }
+  .blog .row .col h6{
+    font-size: 16px;
+  }
+  .blog .row .col p{
+    font-size: 13px;
+  }
 }
 @media screen and (max-width: 767px) {
+  .grid.products, .grid.business, .grid.partner, .grid.training, .grid.testimonial, .grid.blog, .grid.deltal{
+    margin-top: 8rem;
+  }
   .left p,
   .indicators p,
   .products .title span,
@@ -841,6 +863,49 @@
   .introduce .left h2, .title h3, .indicators h3{
     font-size: 2.4rem;
   }
+  .testimonial .wide{
+    width: 540px;
+  }
+  .testimonial .background img{
+    width: 65%;
+  }
+  .testimonial .background h2{
+    font-size: 3rem;
+  }
+  .testimonial .background span{
+    font-size: 12px;
+  }
+  .testimonial .left{
+    margin-right: 60px;
+  }
+  .deltal .block{
+    position: relative!important;
+  }
+  .deltal .block p > span{
+    font-size: 13px;
+  }
+  .deltal .block img{
+    width: 100%;
+  }
+  .business .col h6{
+    font-size: 2rem;
+  }
+  .partner .col img{
+    width: 100%;
+  }
+  .grid.register{
+    width: 540px;
+  }
+  .register .info h6{
+    font-size: 1.6rem;
+  }
+  .register .info p{
+    font-size: 1.2rem;
+  }
+  input,textarea{
+    font-size: 1.3rem;
+  }
 }
+
 @media screen and (max-width: 575px) {
 }
