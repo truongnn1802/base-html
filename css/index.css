@@ -317,44 +317,13 @@
   color: var(--text-color);
 }
 /* --------------------------blog---------------------------------- */
-.blog .row {
+.blog > .row {
   margin-top: 30px;
 }
-.blog > .row > .col img {
-  width: 100%;
-}
+
 .blog .col{
   cursor: pointer;
   margin-top: 15px;
-}
-.blog .row .col div {
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-}
-.blog .row .col div > span {
-  margin-right: 30px;
-  font-size: 16px;
-  line-height: 1.2;
-}
-.blog .row .col div > span:first-child {
-  font-weight: bold;
-  color: #fff;
-  background-color: var(--primary-color);
-  padding: 2px 8px;
-  border-radius: 5px;
-}
-.blog .row .col h6 {
-  font-style: normal;
-  font-size: 20px;
-  color: var(--text-color);
-  line-height: 1.2;
-}
-.blog .row .col p {
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--text-color);
-  line-height: 1.2;
 }
 /* -----------------partner----------------- */
 .partner .row {
@@ -405,10 +374,12 @@
 }
 .register .field {
   margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .register .field input {
-  width: calc(50% - 10px);
+  width: calc(50% - 16px);
   box-sizing: border-box;
 }
 
@@ -418,26 +389,6 @@
 .register textarea {
   /* width: 100%; */
   flex: 1;
-}
-
-.menu-hamburger {
-  position: relative;
-}
-.icon-menu-hamburger svg {
-  fill: var(--primary-color);
-  cursor: pointer;
-}
-.toggle-checkbox {
-  display: none;
-}
-
-.menu-hamburger ul {
-  display: none;
-}
-
-/* Show menu when checkbox is checked */
-.toggle-checkbox:checked ~ ul {
-  display: block;
 }
 
 /* -------------------------------------------------responsive------------------------------------------------------ */
@@ -814,17 +765,7 @@
   .grid.business {
     padding: 0;
   }
-  .blog .row .col div > span{
-    margin-right: 8px;
-    font-size: 12px;
-  }
-  .blog .row .col div > span svg{
-    width: 14px;
-    height: 14px;
-  }
-  .blog .row .col div > span:nth-child(2){
-    margin-left: 8px;
-  }
+  
   .blog span.row span{
     width: 4px!important;
   }
@@ -836,7 +777,7 @@
   }
 }
 @media screen and (max-width: 767px) {
-  .grid.products, .grid.business, .grid.partner, .grid.training, .grid.testimonial, .grid.blog, .grid.deltal{
+  .grid.introduce,.grid.products, .grid.business, .grid.partner, .grid.training, .grid.testimonial, .grid.blog, .grid.deltal{
     margin-top: 8rem;
   }
   .left p,
@@ -896,6 +837,10 @@
   .grid.register{
     width: 540px;
   }
+  .register .field input{
+    width: calc(100% - 10px);
+    margin-right: 0;
+  }
   .register .info h6{
     font-size: 1.6rem;
   }
@@ -908,4 +853,32 @@
 }
 
 @media screen and (max-width: 575px) {
+  .grid.introduce,.grid.indicators,.grid.products, .grid.business, .grid.partner, .grid.training, .grid.testimonial, .grid.blog, .grid.deltal{
+    margin: 6rem 0;
+  }
+  .left p, .indicators p, .products .title span, .training .title span, .title p {
+    margin: 1rem 0;
+  }
+  .introduce .left{
+    text-align: center;
+    order:2;
+    margin-top:20px;
+  }
+  .introduce .left > .row{
+    justify-content: center;
+  }
+  .introduce .right{
+    text-align: center;
+    order:1;
+    margin-left: 0;
+  }
+  .introduce .right img{
+   width: 80%;
+  }
+  .indicators .number h3{
+    font-size: 3rem;
+  }
+  .indicators .number span{
+    font-size: 1rem;
+  }
 }

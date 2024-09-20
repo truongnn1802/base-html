@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #3068f7;
+  --primary-color: rgb(48, 104, 247);
   --text-color: #1c1a7b;
   --second-color-text: #0e3441;
 }
@@ -130,6 +130,26 @@ textarea {
   display: none;
 }
 
+.menu-hamburger {
+  position: relative;
+}
+.icon-menu-hamburger svg {
+  fill: var(--primary-color);
+  cursor: pointer;
+}
+.toggle-checkbox {
+  display: none;
+}
+
+.menu-hamburger ul {
+  display: none;
+}
+
+/* Show menu when checkbox is checked */
+.toggle-checkbox:checked ~ ul {
+  display: block;
+}
+
 /* Menu bên phải */
 ul.menu {
   position: fixed;
@@ -137,22 +157,23 @@ ul.menu {
   right: 0; /* Ban đầu ẩn menu ra khỏi màn hình */
   width: 250px;
   height: 100%;
-  background-color: #3068F7;
+  background-color: #3068f7;
   padding: 20px;
-  transform:translateX(-100%);
+  transform: translateX(-100%);
   transition: moveRight 0.3s ease;
   z-index: 1000;
   color: white;
+  margin: 0;
 }
 @keyframes moveRight {
   0% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   100% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 }
-ul.menu  li {
+ul.menu li {
   margin: 20px 0;
 }
 
@@ -178,7 +199,7 @@ ul.menu li a {
 
 /* Hiển thị menu và overlay khi checkbox được chọn */
 #toggle:checked ~ .menu {
-  transform:translateX(0);
+  transform: translateX(0);
 }
 
 #toggle:checked ~ .overlay {
@@ -194,6 +215,69 @@ ul.menu li a {
   font-size: 24px;
   color: white;
   cursor: pointer;
+}
+/* ---------------------------------------------article-------------------------------------------- */
+.article > div {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.article > div > span {
+  margin-right: 30px;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 0;
+  width: auto;
+}
+.article h6,.article h6 > a {
+  font-style: normal;
+  font-size: 20px;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+.article p {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+.article div > span:first-child {
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+.article img {
+  width: 100%;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  list-style: none;
+}
+
+.pagination a,
+.pagination span {
+  color: var(--second-color-text);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.pagination a:hover {
+  color: var(--text-color);
+}
+
+.pagination a.active {
+  color: var(--primary-color);
+}
+
+.pagination span {
+  cursor: default;
 }
 
 /* ---------------------------------------------footer--------------------------------------------- */
@@ -268,12 +352,16 @@ footer .col p svg {
   }
   .btn {
     font-size: 1.6rem;
-    width: 18rem;
+    width: 14rem;
     padding: 1.6rem 0;
   }
   .search svg {
     width: 20px;
     height: 20px;
+  }
+  .article > div > span {
+    margin-right: 24px;
+    font-size: 14px;
   }
   footer .col h6,
   footer .col p {
@@ -299,6 +387,15 @@ footer .col p svg {
     width: 16px;
     height: 16px;
   }
+  .article > div > span {
+    margin-right: 20px;
+    font-size: 14px;
+}
+  .article .row .col div > span svg{
+    width: 14px;
+    height: 14px;
+  }
+  
 
   footer .grid > .row {
     justify-content: start !important;
@@ -316,7 +413,7 @@ footer .col p svg {
   footer .col h6 {
     margin-bottom: 1.5rem;
   }
-  .copyright{
+  .copyright {
     margin-top: 4rem;
   }
 }
@@ -325,6 +422,12 @@ footer .col p svg {
   .btn {
     font-size: 1.2rem;
     width: 10rem;
+  }
+  .article > div{
+    justify-content: space-between;
+  }
+  .article > div > span{
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 575px) {
