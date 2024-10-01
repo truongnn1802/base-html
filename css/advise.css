@@ -88,12 +88,28 @@
 }
 
 /*-------------------------------------------------------- benefit------------------------------------------- */
-.benefit .left {}
+.benefit {
+    margin-top: 150px;
+}
+
+.benefit .left img {
+    width: 100%;
+}
+
 
 .benefit .right {}
 
-.benefit .right .wrap-content {
-    width: 345px;
+.benefit .right .wrap-content h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    margin-bottom: 30px;
+}
+
+.benefit .right .wrap-content p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
 }
 
 .benefit .right .wrap-content .list-benefit ul {
@@ -262,3 +278,7 @@ footer .col p svg {
     line-height: 1.2;
     margin-top: 6.9rem;
 }
+
+@media screen and (max-width: 1700px) {}
+
+@media screen and (max-width: 576px) {}
