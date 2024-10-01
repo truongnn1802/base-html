@@ -126,7 +126,7 @@
 .grid.partner,
 .grid.training,
 .grid.blog,
-.grid.deltal {
+.grid.dental {
   margin-top: 200px;
 }
 .products .title {
@@ -239,23 +239,23 @@
   line-height: 1.3;
   margin-top: 30px;
 }
-/* Deltal */
-.deltal .title h3 {
+/* dental */
+.dental .title h3 {
   line-height: 1.2;
 }
-.deltal .left {
+.dental .left {
   margin-top: 68px;
   margin-bottom: 77px;
 }
-.deltal .right .block {
+.dental .right .block {
   position: relative;
   width: fit-content;
   overflow: hidden;
 }
-.deltal .right {
+.dental .right {
   position: relative;
 }
-.deltal .right .block p {
+.dental .right .block p {
   position: absolute;
   bottom: 8px;
   left: 0px;
@@ -264,7 +264,7 @@
   background: linear-gradient(90deg, #3068f7 0%, rgba(255, 255, 255, 0) 100%);
   border-radius: 0px 0px 15px 15px;
 }
-.deltal .block p > span {
+.dental .block p > span {
   font-size: 20px;
   font-weight: bold;
   color: #fff;
@@ -272,13 +272,13 @@
   padding: 8px 15px;
   display: inline-block;
 }
-.deltal .block:first-child {
+.dental .block:first-child {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
 }
-.deltal .block:last-child {
+.dental .block:last-child {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -321,7 +321,7 @@
   margin-top: 30px;
 }
 
-.blog .col{
+.blog .col {
   cursor: pointer;
   margin-top: 15px;
 }
@@ -339,10 +339,9 @@
   margin-bottom: 3rem;
   overflow: hidden;
   cursor: pointer;
+  margin-right: calc((100% - (180px * 5)) / 5);
 }
-.partner .col:not(:nth-child(5n)) {
-  margin-right: 3rem;
-}
+
 .partner .col img {
   width: 154px;
   height: 80px;
@@ -457,7 +456,7 @@
   .grid.training,
   .grid.testimonial,
   .grid.blog,
-  .grid.deltal {
+  .grid.dental {
     margin-top: 100px;
   }
 
@@ -523,10 +522,6 @@
     width: 100%;
   }
 
-  .training img {
-    width: 100% !important;
-  }
-
   .testimonial .wide {
     width: 960px;
   }
@@ -557,7 +552,7 @@
     height: 48px !important;
   }
 
-  .deltal img {
+  .dental img {
     width: 350px;
   }
 
@@ -573,10 +568,6 @@
   }
   .business .col h6 {
     font-size: 2.8rem;
-  }
-
-  .partner .col:not(:nth-child(5n)) {
-    margin-right: 2rem;
   }
 
   .blog .row {
@@ -607,7 +598,7 @@
   .grid.training,
   .grid.testimonial,
   .grid.blog,
-  .grid.deltal {
+  .grid.dental {
     margin-top: 100px;
   }
 
@@ -712,7 +703,7 @@
     height: 48px !important;
   }
 
-  .deltal img {
+  .dental img {
     width: 350px;
   }
 
@@ -728,10 +719,6 @@
   }
   .business .col h6 {
     font-size: 2.4rem;
-  }
-
-  .partner .col:not(:nth-child(5n)) {
-    margin-right: 2rem;
   }
 
   .grid.register {
@@ -754,30 +741,37 @@
     width: auto;
   }
 
-  .partner .col:not(:nth-child(3n)) {
-    margin-right: 3rem;
-  }
-
   .partner .row {
     justify-content: center;
   }
 
+  .partner .col {
+    margin-right: calc((100% - (180px * 3)) / 3);
+   } 
+
   .grid.business {
     padding: 0;
   }
-  
-  .blog span.row span{
-    width: 4px!important;
+
+  .blog span.row span {
+    width: 4px !important;
   }
-  .blog .row .col h6{
+  .blog .row .col h6 {
     font-size: 16px;
   }
-  .blog .row .col p{
+  .blog .row .col p {
     font-size: 13px;
   }
 }
 @media screen and (max-width: 767px) {
-  .grid.introduce,.grid.products, .grid.business, .grid.partner, .grid.training, .grid.testimonial, .grid.blog, .grid.deltal{
+  .grid.introduce,
+  .grid.products,
+  .grid.business,
+  .grid.partner,
+  .grid.training,
+  .grid.testimonial,
+  .grid.blog,
+  .grid.dental {
     margin-top: 8rem;
   }
   .left p,
@@ -791,7 +785,7 @@
     flex-basis: 50%;
     max-width: 50%;
   }
-  
+
   .indicators p {
     font-size: 1.3rem;
   }
@@ -801,84 +795,201 @@
   .indicators .number span {
     font-size: 1.2rem;
   }
-  .introduce .left h2, .title h3, .indicators h3{
+  .introduce .left h2,
+  .title h3,
+  .indicators h3 {
     font-size: 2.4rem;
   }
-  .testimonial .wide{
+  .testimonial .wide {
     width: 540px;
   }
-  .testimonial .background img{
+  .testimonial .background img {
     width: 65%;
   }
-  .testimonial .background h2{
+  .testimonial .background h2 {
     font-size: 3rem;
   }
-  .testimonial .background span{
+  .testimonial .background span {
     font-size: 12px;
   }
-  .testimonial .left{
+  .testimonial .left {
     margin-right: 60px;
   }
-  .deltal .block{
-    position: relative!important;
+  .dental .block {
+    position: relative !important;
   }
-  .deltal .block p > span{
+  .dental .block p > span {
     font-size: 13px;
   }
-  .deltal .block img{
+  .dental .block img {
     width: 100%;
   }
-  .business .col h6{
+  .business .col h6 {
     font-size: 2rem;
   }
-  .partner .col img{
+  .partner .col{
+    width: 150px;
+    margin-right: calc((100% - (150px* 3)) / 3);
+  }
+  .partner .col img {
     width: 100%;
   }
-  .grid.register{
+  .grid.register {
     width: 540px;
   }
-  .register .field input{
+  .register .field input {
     width: calc(100% - 10px);
     margin-right: 0;
   }
-  .register .info h6{
+  .register .info h6 {
     font-size: 1.6rem;
   }
-  .register .info p{
+  .register .info p {
     font-size: 1.2rem;
   }
-  input,textarea{
+  input,
+  textarea {
     font-size: 1.3rem;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .grid.introduce,.grid.indicators,.grid.products, .grid.business, .grid.partner, .grid.training, .grid.testimonial, .grid.blog, .grid.deltal{
-    margin: 6rem 0;
+  .grid.introduce,
+  .grid.indicators,
+  .grid.products,
+  .grid.business,
+  .grid.partner,
+  .grid.training,
+  .grid.testimonial,
+  .grid.blog,
+  .grid.dental {
+    margin: 6rem 0 !important;
   }
-  .left p, .indicators p, .products .title span, .training .title span, .title p {
+  .left p,
+  .indicators p,
+  .products .title span,
+  .training .title span,
+  .title p {
     margin: 1rem 0;
   }
-  .introduce .left{
+  .introduce .left {
     text-align: center;
-    order:2;
-    margin-top:20px;
+    order: 2;
+    margin-top: 20px;
   }
-  .introduce .left > .row{
+  .introduce .left > .row {
     justify-content: center;
   }
-  .introduce .right{
+  .introduce .right {
     text-align: center;
-    order:1;
+    order: 1;
     margin-left: 0;
   }
-  .introduce .right img{
-   width: 80%;
+  .introduce .right img {
+    width: 80%;
   }
-  .indicators .number h3{
-    font-size: 3rem;
+  .indicators .number h3 {
+    font-size: 2rem;
   }
-  .indicators .number span{
-    font-size: 1rem;
+  .indicators .number span {
+    font-size: 0.8rem;
+  }
+  .products .prd {
+    padding: 15px;
+    text-align: center;
+  }
+  .list-prd img{
+    width: 50px;
+  }
+  .products .title{
+    margin-bottom: 30px;
+  }
+  .products .prd p{
+    font-size: 1.3rem;
+  }
+  .training > .row {
+    flex-direction: column;
+  }
+
+  .frame {
+    width: 80%;
+    margin: auto;
+  }
+
+  .training .col.left,
+  .dental .col.left {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .testimonial .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial .right {
+    padding: 20px 40px;
+  }
+
+  .detal .row {
+    flex-direction: column;
+  }
+
+  .dental .right .block {
+    width: 60%;
+  }
+
+  .dental .block:last-child {
+    position: relative !important;
+
+    transform: translate(67%, -30%);
+  }
+  .testimonial{
+    padding: 6rem 0;
+  }
+  .testimonial .left{
+    margin: auto;
+  }
+
+  .testimonial .comment{
+    padding: 1.6rem;
+  }
+
+  .grid.business{
+    padding: 0 20px;
+  }
+
+  .business .col{
+    width: 48%;
+  }
+  .partner .col{
+    margin: 0 calc((100% - (150px* 2)) / 4);
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+
+  .grid.register{
+    width: 100%;
+    margin-top: 60px;
+  }
+  .register > .row > .col {
+    display: flex;
+    flex-wrap: wrap;
+    order: 2;
+  }
+  .register .info{
+    margin-right: 2rem;
+    margin-top: 2rem;
+  }
+  .register .info:not(:first-child){
+    margin-top: 2rem;
+  }
+  
+  .register .info p{
+    max-width: 100%;
+  }
+
+  .register .row.flex-column{
+    order: 1!important;
   }
 }

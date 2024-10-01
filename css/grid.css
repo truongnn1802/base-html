@@ -9,6 +9,7 @@
     width: 100%;
     padding: 0;
     display: block;
+    box-sizing: border-box;
   }
  .wide {
     max-width: 1400px;
@@ -78,6 +79,7 @@
   .order-5{
     order: 5;
   }
+
   .xl-0 {
     display: none;
   }
@@ -403,11 +405,29 @@
       .sm-12 {
       display: block;
     }
+    .sm-order-0{
+      order: 0;
+    }
+    .sm-order-1{
+      order: 1;
+    }
+    .sm-order-2{
+      order: 2;
+    }
+    .sm-order-3{
+      order: 3;
+    }
+    .sm-order-4{
+      order: 4;
+    }
+    .sm-order-5{
+      order: 5;
+    }
   }
   @media screen and (max-width: 575px) {
     .grid.wide {
       width: 100%;
-      padding: 0 12px;
+      padding: 0 20px;
     }
     .row {
       margin: 0 -4px;
