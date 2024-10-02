@@ -1,6 +1,5 @@
 /*-------------------------------------------------- body---------------------------------------------- */
 .grid.introduce {
-  margin-top: 90px;
   position: relative;
 }
 
@@ -18,7 +17,6 @@
 }
 
 .left p,
-.indicators p,
 .products .title span,
 .training .title span,
 .title p {
@@ -45,90 +43,12 @@
 .introduce .right img {
   width: 100%;
 }
-/*-------------------------------------------------------- indicators------------------------------------------- */
-.grid.indicators {
-  margin-top: 200px;
-  margin-bottom: 245px;
-  text-align: center;
-}
-.indicators h3 {
-  font-size: 40px;
-  line-height: 1.4;
-  font-weight: 400;
-  margin: 0 auto;
-}
-.indicators p {
-  width: 1020px;
-  margin: 0 auto 10px auto;
-}
-
-.indicators h3 strong {
-  color: var(--primary-color);
-  font-weight: bold;
-}
-.indicators .number {
-  position: relative;
-  margin: 35px 0;
-}
-
-.indicators .number {
-  /* Có thể thêm width cố định hoặc không cần */
-  flex-grow: 1; /* Mặc định cho tất cả phần tử con */
-}
-
-/* Chỉnh tỷ lệ theo yêu cầu */
-.indicators .number:nth-child(1) {
-  flex-grow: 1;
-  text-align: left;
-}
-.indicators .number:nth-child(2),
-.indicators .number:nth-child(3) {
-  flex-grow: 2;
-}
-.indicators .number:nth-child(4) {
-  flex-grow: 1;
-  text-align: right;
-}
-
-.indicators .number h3 {
-  font-size: 80px;
-  margin: 0;
-  color: var(--primary-color);
-  line-height: 1.5;
-  font-weight: bold;
-}
-
-.indicators .number span {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.indicators .number:not(:last-child)::after {
-  content: "";
-  display: block;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(to bottom, #ffffff 0%, #3068f7 50%, #d9d9d9 100%);
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 
 .service .right {
   text-align: end;
   margin-right: 105px;
 }
 /* --------------product------------------- */
-.grid.products,
-.grid.business,
-.grid.partner,
-.grid.training,
-.grid.blog,
-.grid.dental {
-  margin-top: 200px;
-}
 .products .title {
   text-align: center;
 }
@@ -289,9 +209,7 @@
   box-sizing: border-box;
 }
 .business .title,
-.blog .title,
-.partner .title,
-.register .title {
+.blog .title {
   text-align: center;
 }
 .business .title p {
@@ -325,90 +243,21 @@
   cursor: pointer;
   margin-top: 15px;
 }
-/* -----------------partner----------------- */
-.partner .row {
-  width: 1020px;
-  max-width: 0 auto;
-  margin: 6.3rem auto 0;
-}
-.partner .col {
-  border: 2px solid #1c1a7b;
-  border-radius: 10px;
-  width: 180px;
-  height: 84px;
-  margin-bottom: 3rem;
-  overflow: hidden;
-  cursor: pointer;
-  margin-right: calc((100% - (180px * 5)) / 5);
-}
-
-.partner .col img {
-  width: 154px;
-  height: 80px;
-}
-/*-------------------------------------------------- Đăng ký -------------------------------------------------------*/
-.grid.register {
-  width: 1084px;
-  margin-top: 20rem;
-}
-
-.register > .row {
-  margin-top: 3rem;
-}
-.register .info h6 {
-  font-size: 2.4rem;
-  color: var(--primary-color);
-  line-height: 1.4;
-}
-.register .info:not(:first-child) {
-  margin-top: 5rem;
-}
-
-.register .info p {
-  font-size: 1.8rem;
-  color: var(--second-color-text);
-  line-height: 1.4;
-  margin: 0;
-  max-width: 270px;
-}
-.register .field {
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.register .field input {
-  width: calc(50% - 16px);
-  box-sizing: border-box;
-}
-
-.register .field input:first-child {
-  margin-right: 3rem;
-}
-.register textarea {
-  /* width: 100%; */
-  flex: 1;
-}
 
 /* -------------------------------------------------responsive------------------------------------------------------ */
 @media screen and (max-width: 1599px) {
   .introduce .left h2,
-  .title h3,
-  .indicators h3 {
+  .title h3 {
     font-size: 3.6rem;
   }
 
   .left p,
-  .indicators p,
   .products .title span,
   .training .title span,
   .title p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
-  .indicators .number h3 {
-    font-size: 7.2rem;
-  }
   .service .right {
     margin-right: 60px;
   }
@@ -434,13 +283,6 @@
   .testimonial .wide {
     width: 1120px;
   }
-  .register .info h6 {
-    font-size: 2rem;
-  }
-
-  .register .info p {
-    font-size: 1.6rem;
-  }
 }
 
 @media screen and (max-width: 1399px) {
@@ -450,48 +292,16 @@
 }
 
 @media screen and (max-width: 1199px) {
-  .grid.products,
-  .grid.business,
-  .grid.partner,
-  .grid.training,
-  .grid.testimonial,
-  .grid.blog,
-  .grid.dental {
-    margin-top: 100px;
-  }
-
   .introduce .left h2,
-  .title h3,
-  .indicators h3 {
+  .title h3 {
     font-size: 3.2rem;
   }
 
   .left p,
-  .indicators p,
   .products .title span,
   .training .title span,
   .title p {
     font-size: 1.4rem;
-  }
-
-  .grid.indicators {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-  }
-  .indicators .number {
-    margin: 2.5rem 0;
-  }
-  .indicators .number h3 {
-    font-size: 6.4rem;
-  }
-
-  .indicators .number span {
-    font-size: 1.6rem;
-  }
-
-  .indicators p {
-    font-size: 1.4rem;
-    width: auto;
   }
 
   .service > .row {
@@ -569,71 +379,22 @@
   .business .col h6 {
     font-size: 2.8rem;
   }
-
   .blog .row {
     margin-top: 0;
   }
-
-  .grid.register {
-    width: 920px;
-    margin-top: 10rem;
-  }
-
-  .register .info h6 {
-    font-size: 2rem;
-  }
-
-  .register .info p {
-    font-size: 1.6rem;
-  }
-
-  .register .field input:first-child {
-    margin-right: 18px;
-  }
+  
 }
 @media screen and (max-width: 991px) {
-  .grid.products,
-  .grid.business,
-  .grid.partner,
-  .grid.training,
-  .grid.testimonial,
-  .grid.blog,
-  .grid.dental {
-    margin-top: 100px;
-  }
-
   .introduce .left h2,
-  .title h3,
-  .indicators h3 {
+  .title h3 {
     font-size: 2.8rem;
   }
 
   .left p,
-  .indicators p,
   .products .title span,
   .training .title span,
-  .title p {
+  .title p,.products .prd p {
     font-size: 1.3rem;
-  }
-
-  .grid.indicators {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-  }
-  .indicators .number {
-    margin: 2.5rem 0;
-  }
-  .indicators .number h3 {
-    font-size: 4.8rem;
-  }
-
-  .indicators .number span {
-    font-size: 1.3rem;
-  }
-
-  .indicators p {
-    font-size: 1.4rem;
-    width: auto;
   }
 
   .service > .row {
@@ -721,34 +482,6 @@
     font-size: 2.4rem;
   }
 
-  .grid.register {
-    width: 720px;
-  }
-
-  .register .info h6 {
-    font-size: 1.8rem;
-  }
-
-  .register .info p {
-    font-size: 1.6rem;
-  }
-
-  .register .field input:first-child {
-    margin-right: 18px;
-  }
-
-  .partner .row {
-    width: auto;
-  }
-
-  .partner .row {
-    justify-content: center;
-  }
-
-  .partner .col {
-    margin-right: calc((100% - (180px * 3)) / 3);
-   } 
-
   .grid.business {
     padding: 0;
   }
@@ -762,20 +495,10 @@
   .blog .row .col p {
     font-size: 13px;
   }
+  
 }
 @media screen and (max-width: 767px) {
-  .grid.introduce,
-  .grid.products,
-  .grid.business,
-  .grid.partner,
-  .grid.training,
-  .grid.testimonial,
-  .grid.blog,
-  .grid.dental {
-    margin-top: 8rem;
-  }
   .left p,
-  .indicators p,
   .products .title span,
   .training .title span,
   .title p {
@@ -786,22 +509,16 @@
     max-width: 50%;
   }
 
-  .indicators p {
-    font-size: 1.3rem;
-  }
-  .indicators .number h3 {
-    font-size: 4rem;
-  }
-  .indicators .number span {
-    font-size: 1.2rem;
-  }
   .introduce .left h2,
-  .title h3,
-  .indicators h3 {
+  .title h3 {
     font-size: 2.4rem;
   }
   .testimonial .wide {
     width: 540px;
+  }
+  .testimonial > .row{
+    flex-direction: column;
+    align-items: center;
   }
   .testimonial .background img {
     width: 65%;
@@ -827,26 +544,7 @@
   .business .col h6 {
     font-size: 2rem;
   }
-  .partner .col{
-    width: 150px;
-    margin-right: calc((100% - (150px* 3)) / 3);
-  }
-  .partner .col img {
-    width: 100%;
-  }
-  .grid.register {
-    width: 540px;
-  }
-  .register .field input {
-    width: calc(100% - 10px);
-    margin-right: 0;
-  }
-  .register .info h6 {
-    font-size: 1.6rem;
-  }
-  .register .info p {
-    font-size: 1.2rem;
-  }
+  
   input,
   textarea {
     font-size: 1.3rem;
@@ -854,19 +552,7 @@
 }
 
 @media screen and (max-width: 575px) {
-  .grid.introduce,
-  .grid.indicators,
-  .grid.products,
-  .grid.business,
-  .grid.partner,
-  .grid.training,
-  .grid.testimonial,
-  .grid.blog,
-  .grid.dental {
-    margin: 6rem 0 !important;
-  }
   .left p,
-  .indicators p,
   .products .title span,
   .training .title span,
   .title p {
@@ -888,23 +574,17 @@
   .introduce .right img {
     width: 80%;
   }
-  .indicators .number h3 {
-    font-size: 2rem;
-  }
-  .indicators .number span {
-    font-size: 0.8rem;
-  }
   .products .prd {
     padding: 15px;
     text-align: center;
   }
-  .list-prd img{
+  .list-prd img {
     width: 50px;
   }
-  .products .title{
+  .products .title {
     margin-bottom: 30px;
   }
-  .products .prd p{
+  .products .prd p {
     font-size: 1.3rem;
   }
   .training > .row {
@@ -944,52 +624,23 @@
 
     transform: translate(67%, -30%);
   }
-  .testimonial{
+  .testimonial {
     padding: 6rem 0;
   }
-  .testimonial .left{
+  .testimonial .left {
     margin: auto;
   }
 
-  .testimonial .comment{
+  .testimonial .comment {
     padding: 1.6rem;
   }
 
-  .grid.business{
+  .grid.business {
     padding: 0 20px;
   }
 
-  .business .col{
+  .business .col {
     width: 48%;
   }
-  .partner .col{
-    margin: 0 calc((100% - (150px* 2)) / 4);
-    margin-bottom: 2rem;
-    padding: 0;
-  }
-
-  .grid.register{
-    width: 100%;
-    margin-top: 60px;
-  }
-  .register > .row > .col {
-    display: flex;
-    flex-wrap: wrap;
-    order: 2;
-  }
-  .register .info{
-    margin-right: 2rem;
-    margin-top: 2rem;
-  }
-  .register .info:not(:first-child){
-    margin-top: 2rem;
-  }
   
-  .register .info p{
-    max-width: 100%;
-  }
-
-  .register .row.flex-column{
-    order: 1!important;
-  }
 }

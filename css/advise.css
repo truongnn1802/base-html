@@ -1,264 +1,302 @@
-.header {
-    padding: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ul {
+  padding: 0;
+}
+.introduce .left {
+  max-width: 55%;
+  flex: 0 0 55%;
 }
 
-.header .logo>img {
-    height: 55px;
+.check-list > ul {
+  padding: 0;
 }
-
-.header .list-menu {
-    display: flex;
-    margin: 0;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between;
+.wrap__check__list {
+  display: flex;
 }
-
-.header .list-menu .list-menu__item {
-    padding: 10px 0px;
-}
-
-.header .list-menu .list-menu__item a {
-    display: inline-block;
-    color: var(--primary-color);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.header .list-menu .list-menu__item:hover a {
-    color: #1c1a7b;
-}
-
-.header .list-menu .list-menu__item:hover .dropdown-icon path {
-    fill: #1c1a7b;
-}
-
-.header .search {
-    padding-right: 0;
-    justify-content: end;
-    align-items: center;
-}
-
-/*-------------------------------------------------- body---------------------------------------------- */
-.grid.advise {
-    margin-top: 60px;
-}
-
-.advise .left {
-    padding-right: 1.6rem;
-    padding-left: 0;
-}
-
-.advise .left .check-list ul {
-    padding: 0;
-    margin: 30px 0;
-}
-
-.advise .left .check-list ul li.wrap__check__list {
-    display: flex;
-}
-
-.advise .left .check-list ul li .checked-title {
-    color: var(--text-color);
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.2;
-    padding: 5px 20px 0;
-    margin: 0;
-
-}
-
-.introduce .left h2,
-.title h3 {
-    color: var(--primary-color);
-    font-size: 4rem;
-    margin: 0;
-    line-height: 1.4;
-}
-
-.title p {
-    margin: 0;
-}
-
-
-
-.advise .right img {
-    width: 100%;
+.introduce .check-list .checked-title {
+  margin-left: 20px;
 }
 
 /*-------------------------------------------------------- benefit------------------------------------------- */
-.benefit .left {}
-
-.benefit .right {}
-
-.benefit .right .wrap-content {
-    width: 345px;
+.benefit {
+  margin-top: 150px;
+}
+.benefit .left {
+  max-width: 40%;
+  flex: 0 0 40%;
+  padding: 0;
+}
+.benefit .left img {
+  width: 100%;
+  max-width: 451px;
 }
 
-.benefit .right .wrap-content .list-benefit ul {
-    padding: 0;
-    margin-bottom: 25px;
+.benefit .right {
+  max-width: 60%;
+  flex: 0 0 60%;
+  padding-left: 75px;
 }
 
-.benefit .right .wrap-content .list-benefit ul li p {
-    color: var(--text-color);
-    font-size: 20px;
-    padding: 5px 0;
-    margin: 0;
+.benefit .right .wrap-content h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.4;
+}
+.list-benefit {
+  margin: 30px 0;
+}
+.benefit .right .wrap-content p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--text-color);
+  margin: 10px 0;
+  text-align: left;
 }
 
 /* --------------problem------------------- */
-.grid.problem {
-    margin-top: 250px;
-}
-
 .problem .title {
-    text-align: center;
+  text-align: center;
 }
 
 .problem .title h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .problem .list-problem .item-content {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
 }
 
 .problem .list-problem {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .problem .list-problem .item-content .img-content {
-    padding-right: 37px;
+  padding-right: 37px;
 }
 
 .problem .list-problem .item-content .content-detail .content__detail__title {
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0;
-    color: #000000;
-    padding-bottom: 25px;
-    width: 325px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  color: #000000;
+  padding-bottom: 25px;
+  width: 60%;
 }
 
 .problem .list-problem .item-content .content-detail .content__detail__desc {
-    font-size: 16px;
-    margin: 0;
-    color: #000000;
-    width: 451px;
+  font-size: 16px;
+  margin: 0;
+  color: #000000;
+  line-height: 1.3;
+  width: 86%;
 }
 
 /* ---------------------------------------------reason----------------------------------- */
-.reason.grid {
-    margin-top: 150px;
-}
 
 .reason .title {
-    text-align: center;
-
+  text-align: center;
 }
 
 .reason .list-reason .item-reason {
-    margin-top: 0;
-    padding: 62px 32px 10px 30px;
-    width: calc((100% - 64px) / 3);
+  margin-top: 0;
+  padding: 62px 32px 10px 30px;
+  width: calc((100% - 64px) / 3);
 }
 
 .reason .list-reason .item-reason h5 {
-    font-size: 24px;
-    color: var(--text-color);
-    font-weight: 700;
-    padding: 20px 0;
+  font-size: 24px;
+  color: var(--text-color);
+  font-weight: 700;
+  padding: 20px 0;
 }
 
 .reason .list-reason .item-reason p {
-    font-size: 16px;
-    color: var(--text-color);
-    font-weight: 300;
+  font-size: 16px;
+  color: var(--text-color);
+  font-weight: 300;
+}
 
+.reason img {
+  height: 75px;
+  display: inline-block;
 }
 
 /* ---------------------------------------------project------------------------------------------------- */
-.project.grid {
-    margin-top: 150px;
-}
-
 .project .title {
-    text-align: center;
+  text-align: center;
 }
 
 .project .title p {
-
-    font-size: 20px;
-    color: var(--text-color);
+  font-size: 20px;
+  color: var(--text-color);
 }
 
 .project .list-project {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .project .list-project .item-project {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
 .project .list-project .item-project img {
-    border-radius: 8px;
+  border-radius: 8px;
+  width: 100%;
 }
 
 .project .list-project .item-project h6 {
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--text-color);
-    padding: 20px 0 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 20px 0 10px 0;
 }
 
 .project .list-project .item-project p {
-    font-size: 16px;
-    margin: 0;
-    color: #1F1F1F;
+  font-size: 16px;
+  margin: 0;
+  color: #1f1f1f;
+}
+.project button {
+  display: block;
+  margin: auto !important;
 }
 
-/* ---------------------------------------------footer--------------------------------------------- */
-footer {
-    margin-top: 15rem;
-    background-color: #F6F6F6;
-    padding: 10rem 0 3.2rem;
-}
-
-footer .col {
-    color: var(--second-color-text);
-}
-
-footer .col h6,
-footer .col p {
+@media screen and (max-width: 1599px) {
+  .benefit .right .wrap-content h2 {
+    font-size: 3.6rem;
+  }
+  .benefit .right .wrap-content p {
     font-size: 1.8rem;
-    line-height: 1.4;
-    margin-bottom: 3rem;
+  }
 }
-
-footer .col h6 {
-    font-weight: 900;
+@media screen and (max-width: 1399px) {
+  .benefit .right .wrap-content h2 {
+    font-size: 3.4rem;
+  }
+  .benefit .right .wrap-content p {
+    font-size: 1.6rem;
+  }
 }
+@media screen and (max-width: 1199px) {
+  .benefit .right .wrap-content h2 {
+    font-size: 3.2rem;
+  }
+  .benefit .right .wrap-content p {
+    font-size: 1.4rem;
+  }
+  .left p {
+    margin: 1rem 0;
+  }
+  .problem .list-problem .item-content .content-detail .content__detail__title {
+    width: 80%;
+  }
 
-footer .col p {
-    margin: 0;
+  .problem .list-problem .item-content .content-detail .content__detail__desc {
+    width: 100%;
+  }
+  .problem .list-problem .item-content .img-content {
+    padding-right: 25px;
+  }
 }
-
-footer .col:first-child p {
-    display: flex;
-    align-items: center;
+@media screen and (max-width: 991px) {
+  .benefit .right .wrap-content h2 {
+    font-size: 2.8rem;
+  }
+  .benefit .right .wrap-content p {
+    font-size: 1.3rem;
+  }
+  .list-benefit {
+    margin: 20px 0;
+  }
+  .problem .list-problem .item-content .img-content {
+    padding-right: 16px;
+  }
+  .problem .list-problem .item-content .content-detail .content__detail__title {
+    width: 100%;
+    padding-bottom: 16px;
+    font-size: 1.6rem;
+  }
+  .problem .list-problem .item-content .content-detail .content__detail__desc,
+  .reason .list-reason .item-reason p,
+  .project .list-project .item-project p {
+    font-size: 1.3rem;
+  }
+  .reason .list-reason .item-reason h5,
+  .project .list-project .item-project h6 {
+    font-size: 1.8rem;
+  }
 }
-
-footer .col p svg {
-    margin-right: 1rem;
-}
-
-.copyright {
-    color: var(--second-color-text);
+@media screen and (max-width: 767px) {
+  .introduce .check-list .checked-title {
+    margin-left: 12px;
+  }
+  .project .title p{
     font-size: 16px;
-    line-height: 1.2;
-    margin-top: 6.9rem;
+  }
+  .benefit .right .wrap-content h2 {
+    font-size: 2.4rem;
+  }
+  .problem .list-problem .item-content .content-detail .content__detail__title {
+    font-size: 1.4rem;
+  }
+  .reason .list-reason .item-reason h5,
+  .project .list-project .item-project h6 {
+    font-size: 1.6rem;
+  }
+  .project .list-project .item-project h6 {
+    padding: 16px 0 10px;
+  }
+  .problem .list-problem .item-content .content-detail .content__detail__desc,
+  .reason .list-reason .item-reason p,
+  .project .list-project .item-project p {
+    font-size: 1.2rem;
+  }
+  .list-problem img {
+    width: 50px;
+  }
+  .reason .list-reason .item-reason {
+    padding: 40px 20px 10px 20px;
+    width: calc((100% - 32px) / 3);
+  }
+  .reason img {
+    height: 50px;
+  }
+  .reason .list-reason .item-reason h5 {
+    padding: 12px 0;
+  }
+  .item-reason p {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+    
+    .problem .list-problem{
+        margin-top: 30px;
+    }
+  .introduce .left h2,
+  .title h3,
+  .benefit .right .wrap-content h2 {
+    font-size: 2rem;
+  }
+  .introduce .left {
+    padding-right: 0;
+  }
+  .benefit .right {
+    padding-left: 0;
+    order: 2;
+  }
+  .benefit .left{
+    order: 1;
+  }
+  .benefit .left img {
+    width: 50%;
+  }
+  .list-benefit {
+    width: 60%;
+    margin: 0 auto;
+  }
 }

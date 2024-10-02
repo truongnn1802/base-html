@@ -31,15 +31,19 @@
   margin-right: 32px;
 }
 
+.gutter-top{
+  margin-top: 200px!important;
+}
+
 .btn {
   width: 220px;
-  border-color: var(--primary-color);
   border-radius: 15px;
   font-weight: bold;
   font-size: 24px;
   padding: 20px 0;
   line-height: 1;
   cursor: pointer;
+  border: none;
 }
 
 .btn--has-bg {
@@ -50,6 +54,7 @@
 .btn--default {
   color: var(--primary-color);
   background-color: #fff;
+  border-color: var(--primary-color);
 }
 .frame {
   position: relative;
@@ -141,14 +146,14 @@ textarea {
 ul.menu {
   position: fixed;
   top: 0;
-  right: 0; 
+  right: 0;
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
   background-color: #fff;
   padding: 20px;
   transform: translateX(-100%);
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
   z-index: 1000;
   color: var(--primary-color);
   margin: 0;
@@ -178,7 +183,7 @@ ul.menu li a {
   cursor: pointer;
 }
 
-.menu-hamburger .menu .logo{
+.menu-hamburger .menu .logo {
   margin-top: 30px;
   margin-bottom: 60px;
 }
@@ -195,7 +200,8 @@ ul.menu li a {
   margin-top: 0;
   width: auto;
 }
-.article h6,.article h6 > a {
+.article h6,
+.article h6 > a {
   font-style: normal;
   font-size: 20px;
   color: var(--text-color);
@@ -246,6 +252,52 @@ ul.menu li a {
   cursor: default;
 }
 
+/* --------------------------------------------Đăng ký---------------------------------------------*/
+.register .title {
+  text-align: center;
+}
+.grid.register {
+  width: 1084px;
+  margin-top: 20rem;
+}
+
+.register > .row {
+  margin-top: 3rem;
+}
+.register .info h6 {
+  font-size: 2.4rem;
+  color: var(--primary-color);
+  line-height: 1.4;
+}
+.register .info:not(:first-child) {
+  margin-top: 5rem;
+}
+
+.register .info p {
+  font-size: 1.8rem;
+  color: var(--second-color-text);
+  line-height: 1.4;
+  margin: 0;
+  max-width: 270px;
+}
+.register .field {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.register .field input {
+  width: calc(50% - 16px);
+  box-sizing: border-box;
+}
+
+.register .field input:first-child {
+  margin-right: 3rem;
+}
+.register textarea {
+  /* width: 100%; */
+  flex: 1;
+}
 /* ---------------------------------------------footer--------------------------------------------- */
 footer {
   margin-top: 15rem;
@@ -293,6 +345,113 @@ footer .col p svg {
   height: 40px;
 }
 
+/* -----------------------------------indicators--------------------------------------- */
+.grid.indicators {
+  margin-top: 200px;
+  margin-bottom: 245px;
+  text-align: center;
+}
+
+.indicators h3 {
+  font-size: 40px;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0 auto;
+}
+.indicators p {
+  width: 1020px;
+  margin: 0 auto 10px auto;
+}
+
+.indicators h3 strong {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+.indicators .number {
+  position: relative;
+  margin: 35px 0;
+}
+
+.indicators .number {
+  flex-grow: 1;
+}
+
+.indicators .number:nth-child(1) {
+  flex-grow: 1;
+  text-align: left;
+}
+.indicators .number:nth-child(2),
+.indicators .number:nth-child(3) {
+  flex-grow: 2;
+}
+.indicators .number:nth-child(4) {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.indicators .number h3 {
+  font-size: 80px;
+  margin: 0;
+  color: var(--primary-color);
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.indicators .number span {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.indicators .number:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffffff 0%, #3068f7 50%, #d9d9d9 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.indicators p {
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 2rem 0;
+  line-height: 1.2;
+}
+
+.grid.partner{
+  margin-top: 200px;
+}
+.partner .title {
+  text-align: center;
+}
+/* -----------------partner----------------- */
+.partner .row {
+  width: 1020px;
+  max-width: 0 auto;
+  margin: 6.3rem auto 0;
+}
+.partner .col {
+  border: 2px solid #1c1a7b;
+  border-radius: 10px;
+  width: 180px;
+  height: 84px;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  cursor: pointer;
+  margin-right: calc((100% - (180px * 5)) / 5);
+}
+
+.partner .col img {
+  width: 154px;
+  height: 80px;
+}
+
+/* ---------------------------------responsive---------------------------------- */
 @media screen and (max-width: 1599px) {
   .header {
     padding: 15px 0;
@@ -308,8 +467,27 @@ footer .col p svg {
     font-size: 2rem;
     width: 20rem;
   }
+  .register .info h6 {
+    font-size: 2rem;
+  }
+
+  .register .info p {
+    font-size: 1.6rem;
+  }
+  .indicators h3 {
+    font-size: 3.6rem;
+  }
+  .indicators p {
+    font-size: 1.6rem;
+  }
+  .indicators .number h3 {
+    font-size: 7.2rem;
+  }
 }
 @media screen and (max-width: 1199px) {
+  .gutter-top{
+    margin-top: 150px!important;
+  }
   .header {
     padding: 12px 0;
   }
@@ -319,7 +497,7 @@ footer .col p svg {
   .btn {
     font-size: 1.6rem;
     width: 14rem;
-    padding: 1.6rem 0;
+    padding: 1.3rem 0;
   }
   .search svg {
     width: 20px;
@@ -329,6 +507,47 @@ footer .col p svg {
     margin-right: 24px;
     font-size: 14px;
   }
+  .indicators h3 {
+    font-size: 3.2rem;
+  }
+  .indicators p {
+    font-size: 1.4;
+  }
+  .indicators .number {
+    margin: 2.5rem 0;
+  }
+  .indicators .number h3 {
+    font-size: 6.4rem;
+  }
+
+  .indicators .number span {
+    font-size: 1.6rem;
+  }
+
+  .indicators p {
+    font-size: 1.4rem;
+    width: auto;
+  }
+  .grid.indicators,.grid.partner {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+  .grid.register {
+    width: 920px;
+    margin-top: 10rem;
+  }
+
+  .register .info h6 {
+    font-size: 2rem;
+  }
+
+  .register .info p {
+    font-size: 1.6rem;
+  }
+
+  .register .field input:first-child {
+    margin-right: 18px;
+  }
   footer .col h6,
   footer .col p {
     font-size: 1.4rem;
@@ -336,6 +555,9 @@ footer .col p svg {
 }
 
 @media screen and (max-width: 991px) {
+  .gutter-top{
+    margin-top: 120px!important;
+  }
   .header .grid > .row img {
     height: 50px;
   }
@@ -356,12 +578,61 @@ footer .col p svg {
   .article > div > span {
     margin-right: 20px;
     font-size: 14px;
-}
-  .article .row .col div > span svg{
+  }
+  .article .row .col div > span svg {
     width: 14px;
     height: 14px;
   }
+
+  .indicators h3 {
+    font-size: 2.8rem;
+  }
+  .indicators p {
+    font-size: 1.3rem;
+  }
   
+  .indicators .number {
+    margin: 2.5rem 0;
+  }
+  .indicators .number h3 {
+    font-size: 4.8rem;
+  }
+
+  .indicators .number span {
+    font-size: 1.3rem;
+  }
+
+  .indicators p {
+    font-size: 1.4rem;
+  }
+
+  .grid.register {
+    width: 720px;
+  }
+
+  .register .info h6 {
+    font-size: 1.8rem;
+  }
+
+  .register .info p {
+    font-size: 1.6rem;
+  }
+
+  .register .field input:first-child {
+    margin-right: 18px;
+  }
+
+  .partner .row {
+    width: auto;
+  }
+
+  .partner .row {
+    justify-content: center;
+  }
+
+  .partner .col {
+    margin-right: calc((100% - (180px * 3)) / 3);
+  }
 
   footer .grid > .row {
     justify-content: start !important;
@@ -385,7 +656,10 @@ footer .col p svg {
 }
 
 @media screen and (max-width: 767px) {
-  .header .logo{
+  .gutter-top{
+    margin-top: 100px!important;
+  }
+  .header .logo {
     flex: 1;
     text-align: center;
   }
@@ -393,16 +667,92 @@ footer .col p svg {
     font-size: 1.2rem;
     width: 10rem;
   }
-  .article > div{
+  .article > div {
     justify-content: space-between;
   }
-  .article > div > span{
+  .article > div > span {
     margin-right: 0;
+  }
+  .indicators h3 {
+    font-size: 2.4rem;
+  }
+  .indicators p {
+    margin: 1.5rem 0;
+    font-size: 1.3rem;
+  }
+  .indicators .number h3 {
+    font-size: 3rem;
+  }
+  .indicators .number span {
+    font-size: 1rem;
+  }
+  .grid.register {
+    width: 540px;
+  }
+  .register .field input {
+    width: calc(100% - 10px);
+    margin-right: 0;
+  }
+  .register .info h6 {
+    font-size: 1.6rem;
+  }
+  .register .info p {
+    font-size: 1.2rem;
+  }
+  .partner .col {
+    width: 150px;
+    margin-right: calc((100% - (150px * 3)) / 3);
+  }
+  .partner .col img {
+    width: 100%;
   }
 }
 @media screen and (max-width: 575px) {
-  footer{
+  .gutter-top{
+    margin-top: 80px!important;
+  }
+  
+  .indicators p{
+    font-size: 1rem;
+  }
+  
+  .indicators .number h3 {
+    font-size: 2rem;
+  }
+  .indicators .number span {
+    font-size: 0.8rem;
+  }
+  .grid.register {
+    width: 100%;
+    margin-top: 60px;
+  }
+  .register > .row > .col {
+    display: flex;
+    flex-wrap: wrap;
+    order: 2;
+  }
+  .register .info {
+    margin-right: 2rem;
+    margin-top: 2rem;
+  }
+  .register .info:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  .register .info p {
+    max-width: 100%;
+  }
+
+  .register .row.flex-column {
+    order: 1 !important;
+  }
+  .partner .col {
+    margin: 0 calc((100% - (150px * 2)) / 4);
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+  footer {
     margin-top: 10rem;
-    padding-top:5rem;
+    padding-top: 5rem;
   }
 }

@@ -1,6 +1,5 @@
 /*-------------------------------------------------- body---------------------------------------------- */
 .grid.introduce {
-  margin-top: 90px;
   position: relative;
 }
 
@@ -26,7 +25,6 @@
 }
 
 .left p,
-.indicators p,
 .products .title span,
 .training .title span,
 .title p {
@@ -54,90 +52,12 @@
 .introduce .right img {
   width: 540px;
 }
-/*-------------------------------------------------------- indicators------------------------------------------- */
-.grid.indicators {
-  margin-top: 200px;
-  margin-bottom: 245px;
-  text-align: center;
-}
-.indicators h3 {
-  font-size: 40px;
-  line-height: 1.4;
-  font-weight: 400;
-  margin: 0 auto;
-}
-.indicators p {
-  width: 1020px;
-  margin: 0 auto 10px auto;
-}
-
-.indicators h3 strong {
-  color: var(--primary-color);
-  font-weight: bold;
-}
-.indicators .number {
-  position: relative;
-  margin: 35px 0;
-}
-
-.indicators .number {
-  /* Có thể thêm width cố định hoặc không cần */
-  flex-grow: 1; /* Mặc định cho tất cả phần tử con */
-}
-
-/* Chỉnh tỷ lệ theo yêu cầu */
-.indicators .number:nth-child(1) {
-  flex-grow: 1;
-  text-align: left;
-}
-.indicators .number:nth-child(2),
-.indicators .number:nth-child(3) {
-  flex-grow: 2;
-}
-.indicators .number:nth-child(4) {
-  flex-grow: 1;
-  text-align: right;
-}
-
-.indicators .number h3 {
-  font-size: 80px;
-  margin: 0;
-  color: var(--primary-color);
-  line-height: 1.5;
-  font-weight: bold;
-}
-
-.indicators .number span {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.indicators .number:not(:last-child)::after {
-  content: "";
-  display: block;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(to bottom, #ffffff 0%, #3068f7 50%, #d9d9d9 100%);
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 
 .service .right {
   text-align: end;
   margin-right: 105px;
 }
-/* --------------product------------------- */
-.grid.products,
-.grid.business,
-.grid.partner,
-.grid.blog,
-.grid.deltal,
-.grid.difference {
-  margin-top: 200px;
-}
+
 .products .title {
   text-align: center;
 }
@@ -298,9 +218,7 @@
   box-sizing: border-box;
 }
 .business .title,
-.blog .title,
-.partner .title,
-.register .title {
+.blog .title {
   text-align: center;
 }
 .business .title p {
@@ -325,6 +243,21 @@
   text-align: center;
   color: var(--text-color);
 }
+/*-------------------------------------------------- Đăng ký -------------------------------------------------------*/
+.ellipse {
+  width: 600px;
+  height: 200px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(20px, -8px);
+  z-index: -1;
+}
+
+/*----------------------------------------------- Khác biệt DMA------------------------------------------------------ */
 
 .difference h3 {
   text-align: center;
@@ -349,117 +282,34 @@
   flex: 1;
 }
 
-.difference .row h6{
-font-weight: 700;
-font-size: 20px;
-line-height: 27px;
-color: #00A8DF;
+.difference .row h6 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #00a8df;
 }
 
-.difference .row p{
-font-weight: 500;
-font-size: 16px;
-line-height: 22px;
-color: #000000;
- }
-/* -----------------partner----------------- */
-.partner .row {
-  width: 1020px;
-  max-width: 0 auto;
-  margin: 6.3rem auto 0;
-}
-.partner .col {
-  border: 2px solid #1c1a7b;
-  border-radius: 10px;
-  width: 180px;
-  height: 84px;
-  margin-bottom: 3rem;
-  overflow: hidden;
-  cursor: pointer;
-}
-.partner .col:not(:nth-child(5n)) {
-  margin-right: 3rem;
-}
-.partner .col img {
-  width: 154px;
-  height: 80px;
-}
-/*-------------------------------------------------- Đăng ký -------------------------------------------------------*/
-.grid.register {
-  width: 1084px;
-  margin-top: 20rem;
-}
-
-.register > .row {
-  margin-top: 3rem;
-}
-.register .info h6 {
-  font-size: 2.4rem;
-  color: var(--primary-color);
-  line-height: 1.4;
-}
-.register .info:not(:first-child) {
-  margin-top: 5rem;
-}
-
-.register .info p {
-  font-size: 1.8rem;
-  color: var(--second-color-text);
-  line-height: 1.4;
-  margin: 0;
-  max-width: 270px;
-}
-.register .field {
-  margin-bottom: 3rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.register .field input {
-  width: calc(50% - 16px);
-  box-sizing: border-box;
-}
-
-.register .field input:first-child {
-  margin-right: 3rem;
-}
-.register textarea {
-  /* width: 100%; */
-  flex: 1;
-}
-
-.ellipse {
-  width: 600px;
-  height: 200px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: translate(20px, -8px);
-  z-index: -1;
+.difference .row p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
 }
 
 /* -------------------------------------------------responsive------------------------------------------------------ */
 @media screen and (max-width: 1599px) {
   .introduce .left h2,
-  .title h3,
-  .indicators h3 {
+  .title h3 {
     font-size: 3.6rem;
   }
 
   .left p,
-  .indicators p,
   .products .title span,
   .training .title span,
   .title p {
     font-size: 1.6rem;
   }
 
-  .indicators .number h3 {
-    font-size: 7.2rem;
-  }
   .service .right {
     margin-right: 60px;
   }
@@ -485,67 +335,29 @@ color: #000000;
   .testimonial .wide {
     width: 1120px;
   }
-  .register .info h6 {
-    font-size: 2rem;
-  }
-
-  .register .info p {
-    font-size: 1.6rem;
-  }
+ 
 }
 
 @media screen and (max-width: 1399px) {
   .social-network {
     display: none;
   }
-  .introduce .right img{
-    width: 100%!important;
+  .introduce .right img {
+    width: 100% !important;
   }
 }
 
 @media screen and (max-width: 1199px) {
-  .grid.products,
-  .grid.business,
-  .grid.partner,
-  .grid.training,
-  .grid.testimonial,
-  .grid.blog,
-  .grid.deltal {
-    margin-top: 100px;
-  }
-
   .introduce .left h2,
-  .title h3,
-  .indicators h3 {
+  .title h3 {
     font-size: 3.2rem;
   }
 
   .left p,
-  .indicators p,
   .products .title span,
   .training .title span,
   .title p {
     font-size: 1.4rem;
-  }
-
-  .grid.indicators {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-  }
-  .indicators .number {
-    margin: 2.5rem 0;
-  }
-  .indicators .number h3 {
-    font-size: 6.4rem;
-  }
-
-  .indicators .number span {
-    font-size: 1.6rem;
-  }
-
-  .indicators p {
-    font-size: 1.4rem;
-    width: auto;
   }
 
   .service > .row {
@@ -574,6 +386,28 @@ color: #000000;
 
   .introduce .right img {
     width: 100%;
+  }
+
+  .difference .bettween {
+    width: 35%;
+    align-self: center;
+  }
+
+  .difference .row h6 {
+    font-size: 18px;
+  }
+
+  .difference .row p {
+    font-size: 14px;
+    margin: 16px 0;
+  }
+
+  .difference .bettween img {
+    width: 100%;
+  }
+
+  .difference .title p {
+    width: 960px;
   }
 
   .training img {
@@ -628,84 +462,21 @@ color: #000000;
     font-size: 2.8rem;
   }
 
-  .partner .col:not(:nth-child(5n)) {
-    margin-right: 2rem;
-  }
-
   .blog .row {
     margin-top: 0;
   }
-
-  .grid.register {
-    width: 920px;
-    margin-top: 10rem;
-  }
-
-  .register .info h6 {
-    font-size: 2rem;
-  }
-
-  .register .info p {
-    font-size: 1.6rem;
-  }
-
-  .register .field input:first-child {
-    margin-right: 18px;
-  }
-
-  .difference .title p {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
-    text-align: center;
-    color: #000000;
-    width: 960px;
-    margin: 0 auto;
-}
 }
 @media screen and (max-width: 991px) {
-  .grid.products,
-  .grid.business,
-  .grid.partner,
-  .grid.training,
-  .grid.testimonial,
-  .grid.blog,
-  .grid.deltal {
-    margin-top: 100px;
-  }
-
   .introduce .left h2,
-  .title h3,
-  .indicators h3 {
+  .title h3 {
     font-size: 2.8rem;
   }
 
   .left p,
-  .indicators p,
   .products .title span,
   .training .title span,
   .title p {
     font-size: 1.3rem;
-  }
-
-  .grid.indicators {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-  }
-  .indicators .number {
-    margin: 2.5rem 0;
-  }
-  .indicators .number h3 {
-    font-size: 4.8rem;
-  }
-
-  .indicators .number span {
-    font-size: 1.3rem;
-  }
-
-  .indicators p {
-    font-size: 1.4rem;
-    width: auto;
   }
 
   .service > .row {
@@ -736,26 +507,14 @@ color: #000000;
     width: 100%;
   }
 
+  .difference .title p {
+    font-size: 18px;
+    line-height: 24px;
+    width: 720px;
+  }
+
   .training img {
     width: 100% !important;
-  }
-
-  .difference .bettween{
-    width: 35%;
-    align-self: center;
-  }
-
-  .difference .row h6{
-    font-size: 18px;
-  }
-
-  .difference .row p{
-    font-size: 14px;
-    margin: 16px 0;
-  }
-
-  .difference .bettween img{
-    width: 100%;
   }
 
   .testimonial .left {
@@ -808,7 +567,7 @@ color: #000000;
     font-size: 18px;
     line-height: 24px;
     width: 720px;
-}
+  }
 
   .comment p {
     font-size: 1.4rem;
@@ -816,38 +575,6 @@ color: #000000;
   }
   .business .col h6 {
     font-size: 2.4rem;
-  }
-
-  .partner .col:not(:nth-child(5n)) {
-    margin-right: 2rem;
-  }
-
-  .grid.register {
-    width: 720px;
-  }
-
-  .register .info h6 {
-    font-size: 1.8rem;
-  }
-
-  .register .info p {
-    font-size: 1.6rem;
-  }
-
-  .register .field input:first-child {
-    margin-right: 18px;
-  }
-
-  .partner .row {
-    width: auto;
-  }
-
-  .partner .col:not(:nth-child(3n)) {
-    margin-right: 3rem;
-  }
-
-  .partner .row {
-    justify-content: center;
   }
 
   .grid.business {
@@ -864,43 +591,32 @@ color: #000000;
     font-size: 13px;
   }
 }
-@media screen and (max-width:1599px) {
-    #jouney img{
-        width: 540px!important;
-    }
+@media screen and (max-width: 1599px) {
+  #jouney img {
+    width: 540px !important;
+  }
 }
 @media screen and (max-width: 1199px) {
-    #jouney img{
-        width: 420px!important;
-    }
-    .ellipse{
-        width: 560px;
-        transform: translate(70px, -8px);
-    }
+  #jouney img {
+    width: 420px !important;
+  }
+  .ellipse {
+    width: 560px;
+    transform: translate(70px, -8px);
+  }
 }
 @media screen and (max-width: 991px) {
-    #jouney img{
-        width: 340px!important;
-    }
-    .ellipse{
-        width: 400px;
-        height: 150px;
-        transform: translate(10px, -8px);
-    }
+  #jouney img {
+    width: 340px !important;
+  }
+  .ellipse {
+    width: 400px;
+    height: 150px;
+    transform: translate(10px, -8px);
+  }
 }
 @media screen and (max-width: 767px) {
-  .grid.introduce,
-  .grid.products,
-  .grid.business,
-  .grid.partner,
-  .grid.training,
-  .grid.testimonial,
-  .grid.blog,
-  .grid.deltal {
-    margin-top: 8rem;
-  }
   .left p,
-  .indicators p,
   .products .title span,
   .training .title span,
   .title p {
@@ -909,6 +625,8 @@ color: #000000;
   .introduce .left {
     flex-basis: 100%;
     max-width: 100%;
+    text-align: center;
+    margin-top: 20px;
   }
   .introduce .right {
     flex-basis: 100%;
@@ -916,18 +634,8 @@ color: #000000;
     text-align: center;
   }
 
-  .indicators p {
-    font-size: 1.3rem;
-  }
-  .indicators .number h3 {
-    font-size: 4rem;
-  }
-  .indicators .number span {
-    font-size: 1.2rem;
-  }
   .introduce .left h2,
-  .title h3,
-  .indicators h3 {
+  .title h3 {
     font-size: 2.4rem;
   }
   .testimonial .wide {
@@ -945,10 +653,7 @@ color: #000000;
   .testimonial .left {
     margin-right: 60px;
   }
-  .difference .title p{
-    font-size: 16px;
-    width: 540px;
-  }
+
   .deltal .block {
     position: relative !important;
   }
@@ -961,47 +666,26 @@ color: #000000;
   .business .col h6 {
     font-size: 2rem;
   }
-  .partner .col img {
-    width: 100%;
-  }
-  .grid.register {
+ 
+  .difference .title p {
+    font-size: 16px;
     width: 540px;
   }
-  .register .field input {
-    width: calc(100% - 10px);
-    margin-right: 0;
-  }
-  .register .info h6 {
-    font-size: 1.6rem;
-  }
-  .register .info p {
-    font-size: 1.2rem;
-  }
+ 
   input,
   textarea {
     font-size: 1.3rem;
   }
-  .ellipse{
-   
+  .ellipse {
     transform: translate(-75px, -8px);
-}
+  }
 }
 
 @media screen and (max-width: 575px) {
-  .grid.introduce,
-  .grid.indicators,
-  .grid.products,
-  .grid.business,
-  .grid.partner,
-  .grid.training,
-  .grid.testimonial,
-  .grid.blog,
-  .grid.deltal {
-    margin: 6rem 0;
+  .difference > .row{
+    flex-direction: column;
   }
-  .left p,
-  .indicators p,
-  .products .title span,
+  .left p .products .title span,
   .training .title span,
   .title p {
     margin: 1rem 0;
@@ -1014,18 +698,25 @@ color: #000000;
   .introduce .left > .row {
     justify-content: center;
   }
-  .introduce .right {
-    text-align: center;
-    order: 1;
-    margin-left: 0;
-  }
+
   .introduce .right img {
     width: 80%;
   }
-  .indicators .number h3 {
-    font-size: 3rem;
+  .introduce .left {
+    order: 1;
   }
-  .indicators .number span {
-    font-size: 1rem;
+  .introduce .right {
+    order: 2;
+  }
+  .difference .title p{
+    width: 100%;
+  }
+  #jouney img {
+    width: 90% !important;
+  }
+  .ellipse {
+    transform: translate(-10px, -5px);
+    width: 90%;
+    height: 110px;
   }
 }
