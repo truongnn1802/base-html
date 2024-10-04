@@ -24,7 +24,7 @@
   }
   
   .arrow{
-    font-size: 2.4rem;
+    font-size: 4rem;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -45,4 +45,19 @@
   .next.arrow{
     right: 0;
     transform: translate(calc(100% + 30px),50%);
+  }
+
+  @media screen and (max-width: 991px) {
+    .arrow{
+      font-size: 3rem;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .arrow{
+      font-size: 3rem;
+      width: 4rem;
+      height: 4rem;
+    }
   }

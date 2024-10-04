@@ -1,4 +1,7 @@
 /* --------------------marketing------------------------ */
+.marketing{
+  position: relative;
+}
 .marketing .left {
   padding-right: 0;
   padding-left: 0;

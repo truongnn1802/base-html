@@ -1,7 +1,4 @@
-.container {
-  width: 1320px;
-  margin: 0 auto;
-}
+
 .container-fluid {
   width: 100%;
 }
@@ -14,7 +11,7 @@
 .wide {
   max-width: 1400px;
   margin: 0 auto;
-  width: 1320px;
+  width: var(--width-container);
 }
 .row {
   display: flex;
@@ -351,8 +348,6 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
-
-  .lg-0,
   .lg-1,
   .lg-2,
   .lg-3,

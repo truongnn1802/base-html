@@ -286,9 +286,6 @@
 }
 
 @media screen and (max-width: 1399px) {
-  .social-network {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -382,7 +379,6 @@
   .blog .row {
     margin-top: 0;
   }
-  
 }
 @media screen and (max-width: 991px) {
   .introduce .left h2,
@@ -393,7 +389,8 @@
   .left p,
   .products .title span,
   .training .title span,
-  .title p,.products .prd p {
+  .title p,
+  .products .prd p {
     font-size: 1.3rem;
   }
 
@@ -495,7 +492,6 @@
   .blog .row .col p {
     font-size: 13px;
   }
-  
 }
 @media screen and (max-width: 767px) {
   .left p,
@@ -516,7 +512,7 @@
   .testimonial .wide {
     width: 540px;
   }
-  .testimonial > .row{
+  .testimonial > .row {
     flex-direction: column;
     align-items: center;
   }
@@ -544,7 +540,7 @@
   .business .col h6 {
     font-size: 2rem;
   }
-  
+
   input,
   textarea {
     font-size: 1.3rem;
@@ -555,9 +551,14 @@
   .left p,
   .products .title span,
   .training .title span,
-  .title p {
-    margin: 1rem 0;
+  .title p,
+  .products .prd p {
+    font-size: 1.2rem;
   }
+  .wrap__check__list img{
+    width: 1.4rem;
+  }
+ 
   .introduce .left {
     text-align: center;
     order: 2;
@@ -573,6 +574,8 @@
   }
   .introduce .right img {
     width: 80%;
+    max-height: 200px;
+    object-fit: contain;
   }
   .products .prd {
     padding: 15px;
@@ -642,5 +645,4 @@
   .business .col {
     width: 48%;
   }
-  
 }

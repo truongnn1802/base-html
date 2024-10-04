@@ -2,6 +2,7 @@
   --primary-color: rgb(48, 104, 247);
   --text-color: #1c1a7b;
   --second-color-text: #0e3441;
+  --width-container: 1320px;
 }
 
 @font-face {
@@ -36,11 +37,10 @@
 }
 
 .btn {
-  width: 220px;
   border-radius: 15px;
   font-weight: bold;
   font-size: 24px;
-  padding: 20px 0;
+  padding: 20px 27px;
   line-height: 1;
   cursor: pointer;
   border: none;
@@ -54,7 +54,7 @@
 .btn--default {
   color: var(--primary-color);
   background-color: #fff;
-  border-color: var(--primary-color);
+  border:1px solid var(--primary-color);
 }
 .frame {
   position: relative;
@@ -334,10 +334,11 @@ footer .col p svg {
 }
 
 .social-network {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
-  transform: translate(calc(100% + 50px), -40px);
+  transform: translate(-100px, 150px);
+  z-index: 1000000;
 }
 
 .social-network img {
@@ -453,6 +454,9 @@ footer .col p svg {
 
 /* ---------------------------------responsive---------------------------------- */
 @media screen and (max-width: 1599px) {
+  .gutter-top{
+    margin-top: 180px!important;
+  }
   .header {
     padding: 15px 0;
   }
@@ -482,6 +486,11 @@ footer .col p svg {
   }
   .indicators .number h3 {
     font-size: 7.2rem;
+  }
+}
+@media screen and (max-width:1399px) {
+  .social-network{
+    display: none;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -539,6 +548,10 @@ footer .col p svg {
 
   .register .info h6 {
     font-size: 2rem;
+  }
+
+  .social-network {
+    display: none;
   }
 
   .register .info p {
@@ -670,6 +683,12 @@ footer .col p svg {
   .article > div {
     justify-content: space-between;
   }
+  .sm-12.article > div{
+    justify-content: flex-start;
+  }
+  .sm-12.article > div > span{
+    margin-right: 16px;
+  }
   .article > div > span {
     margin-right: 0;
   }
@@ -711,9 +730,11 @@ footer .col p svg {
   .gutter-top{
     margin-top: 80px!important;
   }
-  
+  .indicators h3{
+    font-size: 2rem;
+  }
   .indicators p{
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   
   .indicators .number h3 {
@@ -750,6 +771,12 @@ footer .col p svg {
     margin: 0 calc((100% - (150px * 2)) / 4);
     margin-bottom: 2rem;
     padding: 0;
+  }
+  .xs-12.article > div{
+    justify-content: flex-start;
+  }
+  .xs-12.article > div > span{
+    margin-right: 16px;
   }
   footer {
     margin-top: 10rem;

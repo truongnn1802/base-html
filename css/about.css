@@ -2,7 +2,9 @@
 .grid.introduce {
   position: relative;
 }
-
+section:first-child {
+  margin-top: 100px;
+}
 .introduce .left {
   padding-right: 1.6rem;
   flex: 0 0 45.15151515%;
@@ -335,7 +337,6 @@
   .testimonial .wide {
     width: 1120px;
   }
- 
 }
 
 @media screen and (max-width: 1399px) {
@@ -666,12 +667,12 @@
   .business .col h6 {
     font-size: 2rem;
   }
- 
+
   .difference .title p {
     font-size: 16px;
     width: 540px;
   }
- 
+
   input,
   textarea {
     font-size: 1.3rem;
@@ -682,23 +683,48 @@
 }
 
 @media screen and (max-width: 575px) {
-  .difference > .row{
+  section:first-child {
+    margin-top: 8rem;
+  }
+  .difference > .row {
     flex-direction: column;
   }
-  .left p .products .title span,
+  .introduce .left h2,
+  .title h3 {
+    font-size: 2rem;
+  }
+  .left p,
+  .products .title span,
   .training .title span,
-  .title p {
+  .title p,
+  .products .prd p,
+  .difference .row p,
+  .difference .title p {
     margin: 1rem 0;
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+  .indicators .number {
+    margin: 1rem 0 0;
+    text-align: center !important;
+  }
+  .introduce .left h4,
+  .products .prd h5,
+  .difference .row h6 {
+    font-size: 1.6rem;
+    margin: 0;
   }
   .introduce .left {
     text-align: center;
     order: 2;
-    margin-top: 20px;
+    margin-top: 0;
   }
   .introduce .left > .row {
     justify-content: center;
   }
-
+  .introduce .right {
+    margin: 20px 0;
+  }
   .introduce .right img {
     width: 80%;
   }
@@ -708,15 +734,26 @@
   .introduce .right {
     order: 2;
   }
-  .difference .title p{
+  .difference .title p {
     width: 100%;
   }
   #jouney img {
     width: 90% !important;
   }
   .ellipse {
-    transform: translate(-10px, -5px);
+    transform: translate(-10px, -25px);
     width: 90%;
     height: 110px;
+  }
+  .list-prd {
+    margin-top: 2rem;
+  }
+  .products .prd {
+    padding: 0 1rem 1.2rem;
+  }
+  .products .col img {
+    width: 4rem;
+    display: block;
+    margin: 0 auto;
   }
 }

@@ -2,7 +2,9 @@
   padding-right: 0;
   padding-left: 0;
 }
-
+.train-dentistry {
+  margin-top: 80px;
+}
 .train-dentistry .left h2,
 .partner h3 {
   font-size: 4rem;
@@ -93,14 +95,14 @@
 }
 
 .bg-train .train .title .text {
-  width: 576px;
+  width: 49%;
   margin: 0 auto;
 }
 
 .bg-train .train .title h3 {
   font-weight: 800;
   font-size: 48px;
-  line-height: 66px;
+  line-height: 1.4;
   padding-top: 130px;
   color: #ffffff;
 }
@@ -110,7 +112,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
-  line-height: 27px;
+  line-height: 1.3;
   color: #ffffff;
 }
 
@@ -143,7 +145,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 27px;
+  line-height: 1.3;
   color: #ffffff;
 }
 
@@ -155,7 +157,7 @@
 }
 
 .team .title h3,
-.trust-title h3 {
+.reason .title h3 {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.4;
@@ -163,7 +165,8 @@
 }
 
 .team .title p,
-.trust-title p {
+.trust-title p,
+.reason .title p {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.4;
@@ -230,20 +233,36 @@
 /* =============================trust========================= */
 .bg-trust {
   background-color: var(--primary-color);
+  padding: 60px 0 100px;
 }
 .trust-title {
   text-align: center;
 }
 .trust-title h3 {
   color: #fff;
+  font-size: 4.8rem;
+  font-weight: bold;
+  line-height: 1.4;
 }
 .trust-title p {
   color: #fff;
+  margin: 0;
 }
 .trust {
-  margin-top: 100px;
+  margin-top: 60px;
 }
-
+.bg-trust .arrow {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+.bg-trust .next.arrow {
+  top: 50%;
+  transform: translate(calc(100% + 20px), -50%);
+}
+.bg-trust .previous.arrow {
+  top: 50%;
+  transform: translate(calc(-100% - 20px), -50%);
+}
 .trust .item {
   flex-shrink: 0;
   width: calc(100% / var(--items-visible));
@@ -257,11 +276,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .card .card-info {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .profile-image {
@@ -278,14 +298,14 @@
 }
 
 .name {
-  font-size: 18px;
-  color: #1a1a1a;
+  font-size: 2rem;
+  line-height: 1.4;
+  color: var(--text-color);
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
 .clinic {
-  font-size: 14px;
+  font-size: 16px;
   color: #3a3aaf;
   margin-bottom: 15px;
 }
@@ -295,14 +315,45 @@
   color: #333;
   text-align: left;
 }
-/* ------------------------------------------------------------------partner------------------------------------------------------- */
-
+/* ------------------------------------------------------------------reason------------------------------------------------------- */
+.reason .title {
+  text-align: center;
+}
+.reason .row {
+  margin-top: 3rem;
+}
+.reason .item h4 {
+  width: 90%;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  line-height: 1.4;
+  margin: 30px auto 15px;
+  height: 66px;
+}
+.reason .item p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
+}
+.reason .col {
+  padding: 0 15px;
+}
+.reason img {
+  width: 100%;
+}
 /* ------------------------------------------------------------------responsive---------------------------------------------------- */
 @media screen and (max-width: 1599px) {
+  .trust-title h3 {
+    font-size: 4rem;
+  }
   .train-dentistry .left h2,
   .partner h3,
   .bg-train .train .title h3,
-  .team .title h3 {
+  .team .title h3,
+  .reason .title h3 {
     font-size: 3.6rem;
   }
   .train-dentistry .left p,
@@ -310,12 +361,19 @@
   .team .title p {
     font-size: 1.8rem;
   }
+  .train-dentistry .right .train-dentistry-banner {
+    width: 600px;
+  }
 }
 @media screen and (max-width: 1399px) {
+  .trust-title h3 {
+    font-size: 3.6rem;
+  }
   .train-dentistry .left h2,
   .partner h3,
   .bg-train .train .title h3,
-  .team .title h3 {
+  .team .title h3,
+  .reason .title h3 {
     font-size: 3.4rem;
   }
   .train-dentistry .left p,
@@ -323,46 +381,209 @@
   .team .title p {
     font-size: 1.6rem;
   }
+  .train-dentistry .right .train-dentistry-banner {
+    width: 480px;
+  }
+  .slider-content {
+    width: 50%;
+    padding: 60px 0;
+  }
 }
 @media screen and (max-width: 1199px) {
+  .trust-title h3 {
+    font-size: 3.2rem;
+  }
   .train-dentistry .left h2,
   .partner h3,
   .bg-train .train .title h3,
-  .team .title h3 {
+  .team .title h3,
+  .reason .title h3 {
     font-size: 3.2rem;
   }
-  .train-dentistry .left p,
-  .bg-train .train .title p,
-  .team .title p {
-    font-size: 1.4rem;
+
+  .slider-content {
+    padding: 50px 0;
+    margin-right: 10px;
+  }
+  .slider-img {
+    transform: translate(5px, -15px);
   }
 }
 @media screen and (max-width: 991px) {
+  .trust-title h3 {
+    font-size: 2.8rem;
+  }
   .train-dentistry .left h2,
   .partner h3,
   .bg-train .train .title h3,
-  .team .title h3 {
+  .team .title h3,
+  .reason .title h3 {
     font-size: 2.6rem;
   }
   .train-dentistry .left p,
   .bg-train .train .title p,
-  .team .title p {
+  .team .title p,
+  .train-dentistry .left .check-list ul li .checked-title,
+  .reason .title p {
+    font-size: 1.4rem;
+  }
+  .reason .item h4 {
+    font-size: 1.8rem;
+    width: 100%;
+    margin: 5px 0;
+    height: 44px;
+  }
+  .train-dentistry .right .train-dentistry-banner {
+    width: 380px;
+  }
+  .slider-img {
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, 10px);
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  .slider-img img {
+    height: 100%;
+    scale: 1;
+  }
+  .slider-content {
+    width: 90%;
+    padding: 70px 0 30px;
+  }
+  .slider-content h2 {
+    font-size: 2rem;
+    margin: 10px auto 0;
+  }
+  .slider-content p {
+    font-size: 1.4rem;
+  }
+  .train .wrap-dentistry .col .img {
+    margin-right: 15px;
+  }
+  .train .wrap-dentistry .col .content p {
     font-size: 1.3rem;
+  }
+  .bg-trust .previous.arrow {
+    transform: translate(-50%, -50%);
+  }
+  .bg-trust .next.arrow {
+    transform: translate(50%, -50%);
   }
 }
 @media screen and (max-width: 767px) {
+  .trust-title h3 {
+    font-size: 2.4rem;
+  }
+  .reason .item h4 {
+    font-size: 1.4rem;
+  }
   .train-dentistry .left h2,
   .partner h3,
   .bg-train .train .title h3,
-  .team .title h3 {
-    font-size: 2.4rem;
+  .team .title h3,
+  .reason .title h3 {
+    font-size: 2.2rem;
+  }
+  .train-dentistry .left p,
+  .bg-train .train .title p,
+  .team .title p,
+  .train-dentistry .left .check-list ul li .checked-title,
+  .reason .title p,.reason .item p {
+    font-size: 1.2rem;
+  }
+  .wrap__check__list{
+    margin-bottom: .5rem;
+  }
+  .wrap__check__list img{
+    width: 1.4rem;
+  }
+  .wrap__check__list p{
+    padding:0 6px!important;
+  }
+  .train-dentistry {
+    margin-top: 60px;
+  }
+  .train-dentistry .right .train-dentistry-banner {
+    width: 320px;
+  }
+  .train-dentistry .left .check-list ul {
+    margin: 15px 0;
+  }
+  .train .wrap-dentistry .col .content p {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+  .train .wrap-dentistry .col .img {
+    margin-right: 10px;
+  }
+  .train-dentistry .right .train-dentistry-banner{
+    margin: 0 auto;
+  }
+  .bg-train .train .title h3{
+    padding-top: 6rem;
+  }
+  .bg-train .train .title p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .bg-train .train .title .text{
+    width: 80%;
+  }
+  .team.wide {
+    width: 100%;
+  }
+  .team .title p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .team .carousel {
+    margin-top: 0;
+  }
+  .team .arrow {
+    top: 50%;
+  }
+  .next.arrow {
+    right: 0;
+    transform: translate(calc(100% + 30px), -50%);
+  }
+  .previous.arrow {
+    right: 0;
+    transform: translate(calc(-100% - 30px), -50%);
+  }
+  .team .title{
+    width: 100%;
+  }
+  .wrap-slider {
+    margin-top: 30px;
+  }
+  .slider-content {
+    width: 90%;
+    padding: 70px 0 30px;
+  }
+  .slider-content h2 {
+    font-size: 1.8rem;
+  }
+  .slider-content p {
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 575px) {
+  .trust-title h3 {
+    font-size: 2rem;
+  }
+  .reason .item h4 {
+    font-size: 1.4rem;
+    height: auto;
+  }
   .train-dentistry .left h2,
   .partner h3,
   .bg-train .train .title h3,
-  .team .title h3 {
+  .team .title h3,
+  .reason .title h3 {
     font-size: 2rem;
   }
   .checked-title {
@@ -409,5 +630,33 @@
   }
   .image .list-image .item-image {
     margin: 15px 0;
+  }
+  .train .wrap-dentistry .col .img {
+    width: 40px;
+  }
+  .train .wrap-dentistry{
+    padding-bottom: 8rem;
+  }
+  .bg-train .train .title {
+    margin-bottom: 8rem;
+  }
+  .team .carousel{
+    width: 90%;
+  }
+  .next.arrow {
+    right: 0;
+    transform: translate(50%, 0);
+    z-index: 1000;
+  }
+  .previous.arrow {
+    right: 0;
+    transform: translate(-50%, 0);
+    z-index: 1000;
+  }
+  .slider-content p{
+    font-size: 1.2rem;
+  }
+  .team .title p{
+    width: 100%;
   }
 }

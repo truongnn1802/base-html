@@ -355,6 +355,16 @@
   flex: 0 0 calc((100% - 32px) / 2);
   max-width: calc((100% - 32px) / 2);
 }
+.detail-news .left .body p{
+  font-size: 1.4rem;
+}
+
 }
 @media screen and (max-width: 575px) {
+  .detail-news .hashtag{
+    margin: 15px 0 0;
+  }
+  .detail-news .content-detail p{
+    margin-bottom: 15px;
+  }
 }
