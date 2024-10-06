@@ -3,6 +3,10 @@
   position: relative;
 }
 
+section:first-child {
+  margin-top: 10rem;
+}
+
 .introduce .left {
   padding-right: 1.6rem;
   flex: 0 0 45.15151515%;
@@ -592,6 +596,7 @@
   }
   .training > .row {
     flex-direction: column;
+    cursor: pointer;
   }
 
   .frame {

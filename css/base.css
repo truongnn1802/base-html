@@ -15,7 +15,12 @@
   src: url("../fonts/SVNGilroy\ Light.otf") format("truetype");
   font-weight: normal;
 }
-
+.limited-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
 .mr-1 {
   margin-right: 8px;
 }
@@ -32,8 +37,8 @@
   margin-right: 32px;
 }
 
-.gutter-top{
-  margin-top: 200px!important;
+.gutter-top {
+  margin-top: 200px !important;
 }
 
 .btn {
@@ -54,7 +59,7 @@
 .btn--default {
   color: var(--primary-color);
   background-color: #fff;
-  border:1px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 .frame {
   position: relative;
@@ -96,7 +101,7 @@ textarea {
   padding: 2rem 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.header .logo > img {
+.header .logo > a img {
   height: 55px;
 }
 
@@ -189,7 +194,7 @@ ul.menu li a {
 }
 /* ---------------------------------------------article-------------------------------------------- */
 .article > div {
-  margin: 20px 0;
+  margin: 10px 0;
   display: flex;
   align-items: center;
 }
@@ -206,12 +211,21 @@ ul.menu li a {
   font-size: 20px;
   color: var(--text-color);
   line-height: 1.2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .article p {
   font-weight: 400;
   font-size: 16px;
   color: var(--text-color);
   line-height: 1.2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
 }
 .article div > span:first-child {
   font-weight: bold;
@@ -424,7 +438,7 @@ footer .col p svg {
   line-height: 1.2;
 }
 
-.grid.partner{
+.grid.partner {
   margin-top: 200px;
 }
 .partner .title {
@@ -452,10 +466,43 @@ footer .col p svg {
   height: 80px;
 }
 
+.no-data {
+  background-color: transparent !important;
+  font-size: 16px !important;
+  color: #000 !important;
+  font-weight: 400 !important;
+  min-height: 200px !important;
+}
+#content{
+  visibility: hidden;
+}
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, -50%);
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: var(--primary-color);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation .5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* ---------------------------------responsive---------------------------------- */
 @media screen and (max-width: 1599px) {
-  .gutter-top{
-    margin-top: 180px!important;
+  .gutter-top {
+    margin-top: 180px !important;
   }
   .header {
     padding: 15px 0;
@@ -488,14 +535,14 @@ footer .col p svg {
     font-size: 7.2rem;
   }
 }
-@media screen and (max-width:1399px) {
-  .social-network{
+@media screen and (max-width: 1399px) {
+  .social-network {
     display: none;
   }
 }
 @media screen and (max-width: 1199px) {
-  .gutter-top{
-    margin-top: 150px!important;
+  .gutter-top {
+    margin-top: 150px !important;
   }
   .header {
     padding: 12px 0;
@@ -537,7 +584,8 @@ footer .col p svg {
     font-size: 1.4rem;
     width: auto;
   }
-  .grid.indicators,.grid.partner {
+  .grid.indicators,
+  .grid.partner {
     margin-top: 10rem;
     margin-bottom: 10rem;
   }
@@ -568,8 +616,8 @@ footer .col p svg {
 }
 
 @media screen and (max-width: 991px) {
-  .gutter-top{
-    margin-top: 120px!important;
+  .gutter-top {
+    margin-top: 120px !important;
   }
   .header .grid > .row img {
     height: 50px;
@@ -588,22 +636,32 @@ footer .col p svg {
     width: 16px;
     height: 16px;
   }
-  .article > div > span {
-    margin-right: 20px;
-    font-size: 14px;
+  .article h6,
+  .article h6 > a {
+    font-size: 1.6rem;
   }
-  .article .row .col div > span svg {
-    width: 14px;
-    height: 14px;
+  .article > div > span {
+    margin-right: 15px;
+    font-size: 12px;
   }
 
+  .article > div > span > svg {
+    width: 12px;
+    height: 12px;
+  }
+  .article > div > span > span {
+    width: 4px !important;
+  }
   .indicators h3 {
     font-size: 2.8rem;
   }
-  .indicators p {
+  .indicators p,
+  .article p,
+  .news .center > div > p {
     font-size: 1.3rem;
+    margin-top: 1rem;
   }
-  
+
   .indicators .number {
     margin: 2.5rem 0;
   }
@@ -669,8 +727,8 @@ footer .col p svg {
 }
 
 @media screen and (max-width: 767px) {
-  .gutter-top{
-    margin-top: 100px!important;
+  .gutter-top {
+    margin-top: 100px !important;
   }
   .header .logo {
     flex: 1;
@@ -683,10 +741,10 @@ footer .col p svg {
   .article > div {
     justify-content: space-between;
   }
-  .sm-12.article > div{
+  .sm-12.article > div {
     justify-content: flex-start;
   }
-  .sm-12.article > div > span{
+  .sm-12.article > div > span {
     margin-right: 16px;
   }
   .article > div > span {
@@ -727,16 +785,16 @@ footer .col p svg {
   }
 }
 @media screen and (max-width: 575px) {
-  .gutter-top{
-    margin-top: 80px!important;
+  .gutter-top {
+    margin-top: 80px !important;
   }
-  .indicators h3{
+  .indicators h3 {
     font-size: 2rem;
   }
-  .indicators p{
+  .indicators p {
     font-size: 1.2rem;
   }
-  
+
   .indicators .number h3 {
     font-size: 2rem;
   }
@@ -772,10 +830,10 @@ footer .col p svg {
     margin-bottom: 2rem;
     padding: 0;
   }
-  .xs-12.article > div{
+  .xs-12.article > div {
     justify-content: flex-start;
   }
-  .xs-12.article > div > span{
+  .xs-12.article > div > span {
     margin-right: 16px;
   }
   footer {

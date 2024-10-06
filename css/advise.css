@@ -13,7 +13,12 @@ ul {
   display: flex;
 }
 .introduce .check-list .checked-title {
-  margin-left: 20px;
+  margin: 0 0 0 20px;
+  padding: 5px 0;
+}
+
+.check-list {
+  margin: 3rem 0;
 }
 
 /*-------------------------------------------------------- benefit------------------------------------------- */

@@ -1,1 +1,12 @@
-export const TOKEN = '9264f12c769678427b76f01d3ad4223aafcc668bd75e6dcb474abf1a06101e579cd3bc3d4c34d445bb41cc716ae81a6e764a03ce94244c844fe64c26f03e553b43d24daf497d69a7d0f86ba194990e354f7fb2d3c9f9c1bcf18f827a7eb645754b531a9139313f9bdb8519860b7823ce216da3b0309b1262b799799349ab34b5'
+export const URL = "http://14.225.254.143:1337";
+export const TOKEN =
+  "0798842a12207061f314490e79864be9ed7657cf56789b48f0f3ea183844eb2942c8b72b85b65b1df79949fd115a439d9363ba54b404cbc8c69781ba95840f03fca95f93cb58a9d8430beec972cc0312e5cfe96770f2b1ccd630360fe3c580fc55fda098450f63a17f8d9f48d6b6dc8a139923c47c06c4cf65b73978de580da7";
+export const formatDate = (dateString) => {
+  const date = new Date(dateString);
+
+  const day = date.getUTCDate();
+  const month = date.getUTCMonth() + 1;
+  const year = date.getUTCFullYear();
+
+  return `${day}/${month}/${year}`;
+};
